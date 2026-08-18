@@ -1,0 +1,422 @@
+[
+  {
+    "id": "1",
+    "name": "管弦乐琴乐谱：傲慢",
+    "scene": "水晶塔 古代人迷宫",
+    "src": "陈旧的乐谱：傲慢",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_035-傲慢.ogg"
+  },
+  {
+    "id": "2",
+    "name": "管弦乐琴乐谱：一落千丈",
+    "scene": "水晶塔 古代人迷宫",
+    "src": "陈旧的乐谱：一落千丈",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_036-一落千丈.ogg"
+  },
+  {
+    "id": "3",
+    "name": "管弦乐琴乐谱：多加与乌内之心",
+    "scene": "第七星历编年史：水晶塔过场动画音乐",
+    "src": "陈旧的乐谱：多加与乌内之心",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_037-多加与乌内之心.ogg"
+  },
+  {
+    "id": "4",
+    "name": "管弦乐琴乐谱：绚烂",
+    "scene": "水晶塔 希尔科斯塔",
+    "src": "陈旧的乐谱：绚烂",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_038-绚烂.ogg"
+  },
+  {
+    "id": "5",
+    "name": "管弦乐琴乐谱：破碎",
+    "scene": "水晶塔 希尔科斯塔",
+    "src": "水晶塔 希尔科斯塔获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_228-破碎.ogg"
+  },
+  {
+    "id": "6",
+    "name": "管弦乐琴乐谱：暗淡",
+    "scene": "水晶塔 暗之世界",
+    "src": "陈旧的乐谱：暗淡",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_039-暗淡.ogg"
+  },
+  {
+    "id": "7",
+    "name": "管弦乐琴乐谱：最后的死斗",
+    "scene": "水晶塔 暗之世界",
+    "src": "陈旧的乐谱：最后的死斗",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_040-最后的死斗_～重生～.ogg"
+  },
+  {
+    "id": "8",
+    "name": "管弦乐琴乐谱：悠久之风",
+    "scene": "希望之光",
+    "src": "陈旧的乐谱：一落千丈",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_041-悠久之风_～重生～.ogg"
+  },
+  {
+    "id": "9",
+    "name": "管弦乐琴乐谱：灾厄蔓延",
+    "scene": "第七星历编年史：巴哈姆特系列部分副本",
+    "src": "水城宝物库获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_104-灾厄蔓延.ogg"
+  },
+  {
+    "id": "10",
+    "name": "管弦乐琴乐谱：螺旋",
+    "scene": "第七星历编年史：巴哈姆特系列部分副本",
+    "src": "纪念品兑换员金碟游乐场 (X: 5.1, Y: 6.6)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_149-螺旋.ogg"
+  },
+  {
+    "id": "11",
+    "name": "管弦乐琴乐谱：雷鸣",
+    "scene": "巴哈姆特大迷宫 邂逅之章5",
+    "src": "陈旧的乐谱：雷鸣",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_042-雷鸣.ogg"
+  },
+  {
+    "id": "12",
+    "name": "管弦乐琴乐谱：战乱",
+    "scene": "巴哈姆特大迷宫 入侵之章4、巴哈姆特零式大迷宫 入侵之章4",
+    "src": "纪念品兑换员金碟游乐场 (X: 5.1, Y: 6.6)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_148-战乱.ogg"
+  },
+  {
+    "id": "13",
+    "name": "管弦乐琴乐谱：白银凶鸟展翅翱翔",
+    "scene": "巴哈姆特大迷宫 入侵之章4、巴哈姆特零式大迷宫 入侵之章4",
+    "src": "陈旧的乐谱：白银凶鸟展翅翱翔",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_043-白银凶鸟展翅翱翔.ogg"
+  },
+  {
+    "id": "14",
+    "name": "管弦乐琴乐谱：死灰复燃",
+    "scene": "巴哈姆特大迷宫 真源之章3",
+    "src": "陈旧的乐谱：死灰复燃",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_044-死灰复燃.ogg"
+  },
+  {
+    "id": "15",
+    "name": "管弦乐琴乐谱：Answers　-生死答问-",
+    "scene": "巴哈姆特大迷宫 真源之章4",
+    "src": "陈旧的乐谱：Answers -生死答问-",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_045-Answers_-生死答问-.ogg"
+  },
+  {
+    "id": "16",
+    "name": "管弦乐琴乐谱：最终救赎",
+    "scene": "巴哈姆特绝境战",
+    "src": "乔纳森格里达尼亚旧街 (X: 10.6, Y: 6.3)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_299-最终救赎.ogg"
+  },
+  {
+    "id": "17",
+    "name": "管弦乐琴乐谱：以太圈",
+    "scene": "魔航船虚无方舟",
+    "src": "希丝梅娜田园郡 (X: 5.7, Y: 5.2)兑换 罗薇娜商会的商人伊修加德基础层 (X: 10.5, Y: 11.8)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_151-以太圈.ogg"
+  },
+  {
+    "id": "18",
+    "name": "管弦乐琴乐谱：虚无之棺",
+    "scene": "魔航船虚无方舟",
+    "src": "希丝梅娜田园郡 (X: 5.7, Y: 5.2)兑换 罗薇娜商会的商人伊修加德基础层 (X: 10.5, Y: 11.8)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_152-虚无之棺.ogg"
+  },
+  {
+    "id": "19",
+    "name": "管弦乐琴乐谱：雨中泪",
+    "scene": "禁忌城邦玛哈",
+    "src": "希丝梅娜田园郡 (X: 5.7, Y: 5.2)兑换 罗薇娜商会的商人伊修加德基础层 (X: 10.5, Y: 11.8)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_153-雨中泪.ogg"
+  },
+  {
+    "id": "20",
+    "name": "管弦乐琴乐谱：千面",
+    "scene": "禁忌城邦玛哈",
+    "src": "希丝梅娜田园郡 (X: 5.7, Y: 5.2)兑换 罗薇娜商会的商人伊修加德基础层 (X: 10.5, Y: 11.8)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_154-千面.ogg"
+  },
+  {
+    "id": "21",
+    "name": "管弦乐琴乐谱：希望之地",
+    "scene": "影之国",
+    "src": "影之国奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_155-希望之地.ogg"
+  },
+  {
+    "id": "22",
+    "name": "管弦乐琴乐谱：泡影",
+    "scene": "影之国",
+    "src": "影之国奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_156-泡影.ogg"
+  },
+  {
+    "id": "23",
+    "name": "管弦乐琴乐谱：父子之罪",
+    "scene": "亚历山大机神城系列副本道中战斗",
+    "src": "迈向无人知晓的明天奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_117-父子之罪.ogg"
+  },
+  {
+    "id": "24",
+    "name": "管弦乐琴乐谱：轨迹",
+    "scene": "亚历山大机神城 启动之章1等",
+    "src": "迈向无人知晓的明天奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_118-轨迹.ogg"
+  },
+  {
+    "id": "25",
+    "name": "管弦乐琴乐谱：金属",
+    "scene": "亚历山大机神城 启动之章4等",
+    "src": "迈向无人知晓的明天奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_119-金属.ogg"
+  },
+  {
+    "id": "26",
+    "name": "管弦乐琴乐谱：金属 - 正义无情",
+    "scene": "亚历山大机神城 律动之章4",
+    "src": "迈向无人知晓的明天奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_120-金属_-_正义无情.ogg"
+  },
+  {
+    "id": "27",
+    "name": "管弦乐琴乐谱：指数崩坏",
+    "scene": "亚历山大机神城 天动之章3",
+    "src": "宿命的未来奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_121-指数崩坏.ogg"
+  },
+  {
+    "id": "28",
+    "name": "管弦乐琴乐谱：起义",
+    "scene": "亚历山大机神城 天动之章4",
+    "src": "神圣审判奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_122-起义.ogg"
+  },
+  {
+    "id": "29",
+    "name": "管弦乐琴乐谱：无限循环",
+    "scene": "亚历山大机神城 天动之章4",
+    "src": "贝尔塔娜田园郡 (X: 5.8, Y: 5.2)兑换 罗薇娜商会的商人伊修加德基础层 (X: 10.5, Y: 11.8)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_150-无限循环.ogg"
+  },
+  {
+    "id": "30",
+    "name": "管弦乐琴乐谱：三等分",
+    "scene": "失落之都拉巴纳斯塔",
+    "src": "失落之都拉巴纳斯塔获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_195-三等分.ogg"
+  },
+  {
+    "id": "31",
+    "name": "管弦乐琴乐谱：桥上之战",
+    "scene": "失落之都拉巴纳斯塔",
+    "src": "失落之都拉巴纳斯塔获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_196-桥上之战.ogg"
+  },
+  {
+    "id": "32",
+    "name": "管弦乐琴乐谱：阿尔蒂玛优雅形态",
+    "scene": "失落之都拉巴纳斯塔",
+    "src": "失落之都拉巴纳斯塔获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_197-阿尔蒂玛优雅形态.ogg"
+  },
+  {
+    "id": "33",
+    "name": "管弦乐琴乐谱：主人公主题曲",
+    "scene": "",
+    "src": "失落之都拉巴纳斯塔奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_198-主人公主题曲.ogg"
+  },
+  {
+    "id": "34",
+    "name": "管弦乐琴乐谱：背景故事",
+    "scene": "",
+    "src": "失落之都拉巴纳斯塔奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_199-背景故事.ogg"
+  },
+  {
+    "id": "35",
+    "name": "管弦乐琴乐谱：世界地图",
+    "scene": "",
+    "src": "梦幻之岛奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_241-世界地图.ogg"
+  },
+  {
+    "id": "36",
+    "name": "管弦乐琴乐谱：小礼拜堂",
+    "scene": "",
+    "src": "封闭圣塔奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_242-小礼拜堂.ogg"
+  },
+  {
+    "id": "37",
+    "name": "管弦乐琴乐谱：基鲁菲冈之谜",
+    "scene": "封闭圣塔黎铎拉纳大灯塔",
+    "src": "封闭圣塔黎铎拉纳大灯塔获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_243-基鲁菲冈之谜.ogg"
+  },
+  {
+    "id": "38",
+    "name": "管弦乐琴乐谱：卒中",
+    "scene": "封闭圣塔黎铎拉纳大灯塔",
+    "src": "封闭圣塔黎铎拉纳大灯塔获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_244-卒中.ogg"
+  },
+  {
+    "id": "39",
+    "name": "管弦乐琴乐谱：剑闪",
+    "scene": "封闭圣塔黎铎拉纳大灯塔",
+    "src": "封闭圣塔黎铎拉纳大灯塔获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_245-剑闪.ogg"
+  },
+  {
+    "id": "40",
+    "name": "管弦乐琴乐谱：职员名单",
+    "scene": "",
+    "src": "乐欲之所瓯博讷修道院奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_300-职员名单.ogg"
+  },
+  {
+    "id": "41",
+    "name": "管弦乐琴乐谱：阿鲁玛主题曲",
+    "scene": "",
+    "src": "乐欲之所瓯博讷修道院奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_301-阿鲁玛主题曲.ogg"
+  },
+  {
+    "id": "42",
+    "name": "管弦乐琴乐谱：繁星之下",
+    "scene": "乐欲之所瓯博讷修道院",
+    "src": "乐欲之所瓯博讷修道院获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_302-繁星之下.ogg"
+  },
+  {
+    "id": "43",
+    "name": "管弦乐琴乐谱：紧急1",
+    "scene": "乐欲之所瓯博讷修道院",
+    "src": "乐欲之所瓯博讷修道院获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_303-紧急1.ogg"
+  },
+  {
+    "id": "44",
+    "name": "管弦乐琴乐谱：退热剂",
+    "scene": "乐欲之所瓯博讷修道院",
+    "src": "乐欲之所瓯博讷修道院获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_304-退热剂.ogg"
+  },
+  {
+    "id": "45",
+    "name": "管弦乐琴乐谱：异形之人",
+    "scene": "乐欲之所瓯博讷修道院",
+    "src": "乐欲之所瓯博讷修道院获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_305-异形之人.ogg"
+  },
+  {
+    "id": "46",
+    "name": "管弦乐琴乐谱：阿尔蒂玛完美形态",
+    "scene": "乐欲之所瓯博讷修道院",
+    "src": "乐欲之所瓯博讷修道院获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_306-阿尔蒂玛完美形态.ogg"
+  },
+  {
+    "id": "47",
+    "name": "管弦乐琴乐谱：德尔塔幻境",
+    "scene": "欧米茄时空狭缝 阿尔法幻境2、欧米茄零式时空狭缝 阿尔法幻境2",
+    "src": "原初之龙如红色流星般降临奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_274-德尔塔幻境.ogg"
+  },
+  {
+    "id": "48",
+    "name": "管弦乐琴乐谱：战斗2δ",
+    "scene": "欧米茄时空狭缝 德尔塔幻境1-欧米茄时空狭缝 德尔塔幻境3、欧米茄零式时空狭缝 德尔塔幻境1-欧米茄零式时空狭缝 德尔塔幻境3",
+    "src": "欧米茄时空狭缝 德尔塔幻境1-欧米茄时空狭缝 德尔塔幻境3获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_262-战斗2δ.ogg"
+  },
+  {
+    "id": "49",
+    "name": "管弦乐琴乐谱：决战δ",
+    "scene": "欧米茄时空狭缝 德尔塔幻境4、欧米茄零式时空狭缝 德尔塔幻境4",
+    "src": "欧米茄时空狭缝 德尔塔幻境4获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_263-决战δ.ogg"
+  },
+  {
+    "id": "50",
+    "name": "管弦乐琴乐谱：最后之战δ",
+    "scene": "欧米茄零式时空狭缝 德尔塔幻境4",
+    "src": "艾西娜神拳痕 (X: 13.8, Y: 11.8)兑换 罗薇娜商会的商人黄金港 (X: 12.2, Y: 10.8)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_264-最后之战δ.ogg"
+  },
+  {
+    "id": "51",
+    "name": "管弦乐琴乐谱：决战σ",
+    "scene": "欧米茄时空狭缝 西格玛幻境1-欧米茄时空狭缝 西格玛幻境3、欧米茄零式时空狭缝 西格玛幻境1-欧米茄零式时空狭缝 西格玛幻境3",
+    "src": "欧米茄时空狭缝 西格玛幻境1-欧米茄时空狭缝 西格玛幻境3获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_265-决战σ.ogg"
+  },
+  {
+    "id": "52",
+    "name": "管弦乐琴乐谱：妖星乱舞σ 第1乐章",
+    "scene": "欧米茄时空狭缝 西格玛幻境4、欧米茄零式时空狭缝 西格玛幻境4",
+    "src": "欧米茄时空狭缝 西格玛幻境4获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_266-妖星乱舞σ_第1乐章.ogg"
+  },
+  {
+    "id": "53",
+    "name": "管弦乐琴乐谱：妖星乱舞σ 第2乐章",
+    "scene": "欧米茄时空狭缝 西格玛幻境4、欧米茄零式时空狭缝 西格玛幻境4",
+    "src": "欧米茄时空狭缝 西格玛幻境4获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_267-妖星乱舞σ_第2乐章.ogg"
+  },
+  {
+    "id": "54",
+    "name": "管弦乐琴乐谱：妖星乱舞σ 第3乐章",
+    "scene": "欧米茄时空狭缝 西格玛幻境4、欧米茄零式时空狭缝 西格玛幻境4",
+    "src": "欧米茄时空狭缝 西格玛幻境4获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_268-妖星乱舞σ_第3乐章.ogg"
+  },
+  {
+    "id": "55",
+    "name": "管弦乐琴乐谱：妖星乱舞σ 第4乐章",
+    "scene": "欧米茄零式时空狭缝 西格玛幻境4",
+    "src": "艾西娜神拳痕 (X: 13.8, Y: 11.8)兑换 罗薇娜商会的商人黄金港 (X: 12.2, Y: 10.8)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_269-妖星乱舞σ_第4乐章.ogg"
+  },
+  {
+    "id": "56",
+    "name": "管弦乐琴乐谱：战斗α",
+    "scene": "欧米茄时空狭缝 阿尔法幻境1、欧米茄零式时空狭缝 阿尔法幻境1",
+    "src": "欧米茄时空狭缝 阿尔法幻境1获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_270-战斗α.ogg"
+  },
+  {
+    "id": "57",
+    "name": "管弦乐琴乐谱：万龙之祖",
+    "scene": "幻龙残骸密约之塔、欧米茄时空狭缝 阿尔法幻境2、欧米茄零式时空狭缝 阿尔法幻境2",
+    "src": "欧米茄时空狭缝 阿尔法幻境2获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_271-万龙之祖.ogg"
+  },
+  {
+    "id": "58",
+    "name": "管弦乐琴乐谱：逃亡",
+    "scene": "欧米茄时空狭缝 阿尔法幻境3、欧米茄零式时空狭缝 阿尔法幻境3",
+    "src": "欧米茄时空狭缝 阿尔法幻境3获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_272-逃亡.ogg"
+  },
+  {
+    "id": "59",
+    "name": "管弦乐琴乐谱：无心",
+    "scene": "欧米茄时空狭缝 阿尔法幻境4、欧米茄零式时空狭缝 阿尔法幻境4",
+    "src": "欧米茄时空狭缝 阿尔法幻境4获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_273-无心.ogg"
+  },
+  {
+    "id": "60",
+    "name": "管弦乐琴乐谱：从天而降",
+    "scene": "欧米茄零式时空狭缝 阿尔法幻境4",
+    "src": "艾西娜神拳痕 (X: 13.8, Y: 11.8)兑换 罗薇娜商会的商人黄金港 (X: 12.2, Y: 10.8)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_277-从天而降.ogg"
+  }
+]

@@ -1,0 +1,884 @@
+[
+  {
+    "id": "1",
+    "name": "管弦乐琴乐谱：意义／无",
+    "scene": "寄叶异闻：暗黑天启剧情音乐",
+    "src": "封闭之门的对面奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_362-意义／无.ogg"
+  },
+  {
+    "id": "2",
+    "name": "管弦乐琴乐谱：遗留之所／斜光",
+    "scene": "寄叶异闻：暗黑天启剧情音乐",
+    "src": "复制工厂废墟获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_363-遗留之所／斜光.ogg"
+  },
+  {
+    "id": "3",
+    "name": "管弦乐琴乐谱：不归之声／吉他",
+    "scene": "寄叶异闻：暗黑天启剧情音乐",
+    "src": "阿诺古的积极调查或科诺古的慎重调查奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_364-不归之声／吉他.ogg"
+  },
+  {
+    "id": "4",
+    "name": "管弦乐琴乐谱：异物显现",
+    "scene": "复制工厂废墟",
+    "src": "复制工厂废墟获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_365-异物显现.ogg"
+  },
+  {
+    "id": "5",
+    "name": "管弦乐琴乐谱：远古之歌／赎罪",
+    "scene": "复制工厂废墟",
+    "src": "复制工厂废墟获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_366-远古之歌／赎罪.ogg"
+  },
+  {
+    "id": "6",
+    "name": "管弦乐琴乐谱：双极的噩梦",
+    "scene": "复制工厂废墟",
+    "src": "复制工厂废墟获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_367-双极的噩梦.ogg"
+  },
+  {
+    "id": "7",
+    "name": "管弦乐琴乐谱：世界的重量／水晶序曲版",
+    "scene": "复制工厂废墟",
+    "src": "复制工厂废墟获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_368-世界的重量／水晶序曲版.ogg"
+  },
+  {
+    "id": "8",
+    "name": "管弦乐琴乐谱：崩坏的虚妄",
+    "scene": "寄叶异闻：暗黑天启剧情音乐",
+    "src": "阿诺古急进的计划奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_381-崩坏的虚妄.ogg"
+  },
+  {
+    "id": "9",
+    "name": "管弦乐琴乐谱：蓝色原野",
+    "scene": "空无大地",
+    "src": "待某日花儿盛开时奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_371-蓝色原野_～暗影～.ogg"
+  },
+  {
+    "id": "10",
+    "name": "管弦乐琴乐谱：力战前行　～暗影～",
+    "scene": "伊甸希望乐园 觉醒之章1、伊甸希望乐园 觉醒之章2、伊甸零式希望乐园 觉醒之章1、伊甸零式希望乐园 觉醒之章2",
+    "src": "伊甸希望乐园 觉醒之章1、伊甸希望乐园 觉醒之章2获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_341-力战前行_～暗影～.ogg"
+  },
+  {
+    "id": "11",
+    "name": "管弦乐琴乐谱：耀眼浪苍",
+    "scene": "伊甸希望乐园 觉醒之章3、伊甸零式希望乐园 觉醒之章3",
+    "src": "伊甸希望乐园 觉醒之章3获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_342-耀眼浪苍.ogg"
+  },
+  {
+    "id": "12",
+    "name": "管弦乐琴乐谱：地裂",
+    "scene": "伊甸希望乐园 觉醒之章4、伊甸零式希望乐园 觉醒之章4",
+    "src": "伊甸希望乐园 觉醒之章4获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_343-地裂.ogg"
+  },
+  {
+    "id": "13",
+    "name": "管弦乐琴乐谱：雷轰电转",
+    "scene": "伊甸希望乐园 共鸣之章1、伊甸零式希望乐园 共鸣之章1",
+    "src": "伊甸希望乐园 共鸣之章1获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_372-雷轰电转.ogg"
+  },
+  {
+    "id": "14",
+    "name": "管弦乐琴乐谱：原始的堕天使",
+    "scene": "伊甸希望乐园 共鸣之章2、伊甸零式希望乐园 共鸣之章2",
+    "src": "伊甸希望乐园 共鸣之章2获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_373-原始的堕天使.ogg"
+  },
+  {
+    "id": "15",
+    "name": "管弦乐琴乐谱：忘却的此岸",
+    "scene": "伊甸希望乐园 共鸣之章4、伊甸零式希望乐园 共鸣之章4",
+    "src": "伊甸希望乐园 共鸣之章4获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_374-忘却的此岸.ogg"
+  },
+  {
+    "id": "16",
+    "name": "管弦乐琴乐谱：破碎的心",
+    "scene": "寄叶异闻：暗黑天启剧情音乐",
+    "src": "争执与责任奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_424-破碎的心.ogg"
+  },
+  {
+    "id": "17",
+    "name": "管弦乐琴乐谱：游乐园",
+    "scene": "寄叶异闻：暗黑天启剧情音乐",
+    "src": "古姆拉村的庆典奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_425-游乐园.ogg"
+  },
+  {
+    "id": "18",
+    "name": "管弦乐琴乐谱：谎言之城",
+    "scene": "人偶军事基地",
+    "src": "人偶军事基地获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_426-谎言之城.ogg"
+  },
+  {
+    "id": "19",
+    "name": "管弦乐琴乐谱：祖母／破坏",
+    "scene": "人偶军事基地",
+    "src": "人偶军事基地获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_427-祖母／破坏.ogg"
+  },
+  {
+    "id": "20",
+    "name": "管弦乐琴乐谱：异形的末路",
+    "scene": "人偶军事基地",
+    "src": "人偶军事基地获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_428-异形的末路.ogg"
+  },
+  {
+    "id": "21",
+    "name": "管弦乐琴乐谱：天降之力～破坏一切的黑色巨人／混合版",
+    "scene": "人偶军事基地",
+    "src": "人偶军事基地获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_429-天降之力～破坏一切的黑色巨人／混合版.ogg"
+  },
+  {
+    "id": "22",
+    "name": "管弦乐琴乐谱：不要畏惧　～暗影～",
+    "scene": "伊甸希望乐园 再生之章1、伊甸希望乐园 再生之章2、伊甸零式希望乐园 再生之章1、伊甸零式希望乐园 再生之章2",
+    "src": "伊甸希望乐园 再生之章2获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_439-不要畏惧_～暗影～.ogg"
+  },
+  {
+    "id": "23",
+    "name": "管弦乐琴乐谱：传说之兽　～暗影～",
+    "scene": "伊甸希望乐园 再生之章3、伊甸零式希望乐园 再生之章3、光暗未来绝境战",
+    "src": "伊甸希望乐园 再生之章3获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_440-传说之兽_～暗影～.ogg"
+  },
+  {
+    "id": "24",
+    "name": "管弦乐琴乐谱：不会失效的约定",
+    "scene": "伊甸希望乐园 再生之章4、伊甸零式希望乐园 再生之章4、光暗未来绝境战",
+    "src": "伊甸希望乐园 再生之章4获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_441-不会失效的约定.ogg"
+  },
+  {
+    "id": "25",
+    "name": "管弦乐琴乐谱：极尽　～暗影～",
+    "scene": "伊甸零式希望乐园 再生之章4、光暗未来绝境战",
+    "src": "伊甸零式希望乐园 再生之章4获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_442-极尽_～暗影～.ogg"
+  },
+  {
+    "id": "26",
+    "name": "管弦乐琴乐谱：追悼",
+    "scene": "希望之炮台：“塔”",
+    "src": "希望之炮台：“塔”获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_480-追悼.ogg"
+  },
+  {
+    "id": "27",
+    "name": "管弦乐琴乐谱：艾米尔／绝望",
+    "scene": "希望之炮台：“塔”",
+    "src": "希望之炮台：“塔”获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_481-艾米尔／绝望.ogg"
+  },
+  {
+    "id": "28",
+    "name": "管弦乐琴乐谱：终结之音",
+    "scene": "希望之炮台：“塔”",
+    "src": "希望之炮台：“塔”获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_483-终结之音.ogg"
+  },
+  {
+    "id": "29",
+    "name": "管弦乐琴乐谱：终结之音：丁",
+    "scene": "希望之炮台：“塔”",
+    "src": "希望之炮台：“塔”获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_484-终结之音：丁.ogg"
+  },
+  {
+    "id": "30",
+    "name": "管弦乐琴乐谱：凯宁／最终幻想主题曲版",
+    "scene": "希望之炮台：“塔”",
+    "src": "希望之炮台：“塔”获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_485-凯宁／最终幻想主题曲版.ogg"
+  },
+  {
+    "id": "31",
+    "name": "管弦乐琴乐谱：不归之声／通常",
+    "scene": "寄叶异闻：暗黑天启剧情音乐",
+    "src": "孤独的科诺古奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_487-不归之声／通常.ogg"
+  },
+  {
+    "id": "32",
+    "name": "管弦乐琴乐谱：沉痛之色",
+    "scene": "寄叶异闻：暗黑天启剧情音乐",
+    "src": "孤独的科诺古奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_488-沉痛之色.ogg"
+  },
+  {
+    "id": "33",
+    "name": "管弦乐琴乐谱：疫病蔓延",
+    "scene": "寄叶异闻：暗黑天启剧情音乐",
+    "src": "敌人现身奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_489-疫病蔓延.ogg"
+  },
+  {
+    "id": "34",
+    "name": "管弦乐琴乐谱：恶疾缠身",
+    "scene": "寄叶异闻：暗黑天启剧情音乐",
+    "src": "敌人现身奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_490-恶疾缠身.ogg"
+  },
+  {
+    "id": "35",
+    "name": "管弦乐琴乐谱：停滞的祈祷／晓风",
+    "scene": "寄叶异闻：暗黑天启剧情音乐",
+    "src": "敌人现身奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_491-停滞的祈祷／晓风.ogg"
+  },
+  {
+    "id": "36",
+    "name": "管弦乐琴乐谱：世界的重量／伴奏曲",
+    "scene": "寄叶异闻：暗黑天启剧情音乐",
+    "src": "心之所在奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_486-世界的重量／伴奏曲.ogg"
+  },
+  {
+    "id": "37",
+    "name": "管弦乐琴乐谱：惩戒的镣铐",
+    "scene": "万魔殿 边境之狱1、万魔殿 边境之狱2、万魔殿 边境之狱3",
+    "src": "万魔殿 边境之狱3获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_501-惩戒的镣铐.ogg"
+  },
+  {
+    "id": "38",
+    "name": "管弦乐琴乐谱：此处有狮",
+    "scene": "万魔殿 边境之狱4、零式万魔殿 边境之狱4",
+    "src": "万魔殿 边境之狱4获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_502-此处有狮.ogg"
+  },
+  {
+    "id": "39",
+    "name": "管弦乐琴乐谱：巡礼者之路",
+    "scene": "灿烂神域阿格莱亚",
+    "src": "灿烂神域阿格莱亚获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_524-巡礼者之路.ogg"
+  },
+  {
+    "id": "40",
+    "name": "管弦乐琴乐谱：威光",
+    "scene": "灿烂神域阿格莱亚",
+    "src": "灿烂神域阿格莱亚获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_525-威光.ogg"
+  },
+  {
+    "id": "41",
+    "name": "管弦乐琴乐谱：生命的天平",
+    "scene": "灿烂神域阿格莱亚",
+    "src": "灿烂神域阿格莱亚获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_526-生命的天平.ogg"
+  },
+  {
+    "id": "42",
+    "name": "管弦乐琴乐谱：无声尖叫",
+    "scene": "万魔殿 炼净之狱1、零式万魔殿 炼净之狱1",
+    "src": "万魔殿 炼净之狱1获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_552-无声尖叫.ogg"
+  },
+  {
+    "id": "43",
+    "name": "管弦乐琴乐谱：尖叫",
+    "scene": "万魔殿 炼净之狱2、万魔殿 炼净之狱3、零式万魔殿 炼净之狱2、零式万魔殿 炼净之狱3",
+    "src": "万魔殿 炼净之狱2获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_553-尖叫.ogg"
+  },
+  {
+    "id": "44",
+    "name": "管弦乐琴乐谱：其火尚存",
+    "scene": "万魔殿 炼净之狱4、零式万魔殿 炼净之狱4",
+    "src": "万魔殿 炼净之狱4获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_554-其火尚存.ogg"
+  },
+  {
+    "id": "45",
+    "name": "管弦乐琴乐谱：相白质黑",
+    "scene": "零式万魔殿 炼净之狱4",
+    "src": "零式万魔殿 炼净之狱4获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_555-相白质黑.ogg"
+  },
+  {
+    "id": "46",
+    "name": "管弦乐琴乐谱：众神的宠爱",
+    "scene": "喜悦神域欧芙洛绪涅",
+    "src": "喜悦神域欧芙洛绪涅获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_581-众神的宠爱.ogg"
+  },
+  {
+    "id": "47",
+    "name": "管弦乐琴乐谱：跃动的大地",
+    "scene": "喜悦神域欧芙洛绪涅",
+    "src": "喜悦神域欧芙洛绪涅获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_582-跃动的大地.ogg"
+  },
+  {
+    "id": "48",
+    "name": "管弦乐琴乐谱：满月之夜",
+    "scene": "喜悦神域欧芙洛绪涅",
+    "src": "喜悦神域欧芙洛绪涅获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_583-满月之夜.ogg"
+  },
+  {
+    "id": "49",
+    "name": "管弦乐琴乐谱：疲惫不堪",
+    "scene": "万魔殿 荒天之狱1、万魔殿 荒天之狱2、零式万魔殿 荒天之狱1、零式万魔殿 荒天之狱2",
+    "src": "万魔殿 荒天之狱1、万魔殿 荒天之狱2获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_608-疲惫不堪.ogg"
+  },
+  {
+    "id": "50",
+    "name": "管弦乐琴乐谱：转瞬即逝",
+    "scene": "万魔殿 荒天之狱3、零式万魔殿 荒天之狱3",
+    "src": "万魔殿 荒天之狱3获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_609-转瞬即逝.ogg"
+  },
+  {
+    "id": "51",
+    "name": "管弦乐琴乐谱：不倦之人雅典娜",
+    "scene": "万魔殿 荒天之狱4、零式万魔殿 荒天之狱4",
+    "src": "万魔殿 荒天之狱4获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_610-不倦之人雅典娜.ogg"
+  },
+  {
+    "id": "52",
+    "name": "管弦乐琴乐谱：阿尔蒂玛完美形态　～晓月～",
+    "scene": "零式万魔殿 荒天之狱4",
+    "src": "零式万魔殿 荒天之狱4获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_611-阿尔蒂玛完美形态_～晓月～.ogg"
+  },
+  {
+    "id": "53",
+    "name": "管弦乐琴乐谱：起始的幻域",
+    "scene": "翁法洛斯",
+    "src": "心之所在奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_523-起始的幻域.ogg"
+  },
+  {
+    "id": "54",
+    "name": "管弦乐琴乐谱：心愿如风随行",
+    "scene": "荣华神域塔利亚",
+    "src": "荣华神域塔利亚获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_651-心愿如风随行.ogg"
+  },
+  {
+    "id": "55",
+    "name": "管弦乐琴乐谱：热情的奔流",
+    "scene": "荣华神域塔利亚",
+    "src": "荣华神域塔利亚获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_652-热情的奔流.ogg"
+  },
+  {
+    "id": "56",
+    "name": "管弦乐琴乐谱：艾欧泽亚神话",
+    "scene": "荣华神域塔利亚",
+    "src": "荣华神域塔利亚获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_653-艾欧泽亚神话.ogg"
+  },
+  {
+    "id": "57",
+    "name": "管弦乐琴乐谱：开演时间！",
+    "scene": "阿卡狄亚登天斗技场 轻量级1、阿卡狄亚零式登天斗技场 轻量级1",
+    "src": "阿卡狄亚登天斗技场 轻量级1获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_727-开演时间！.ogg"
+  },
+  {
+    "id": "58",
+    "name": "管弦乐琴乐谱：甜甜蜜蜜",
+    "scene": "阿卡狄亚登天斗技场 轻量级2、阿卡狄亚零式登天斗技场 轻量级2",
+    "src": "阿卡狄亚登天斗技场 轻量级2获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_728-甜甜蜜蜜.ogg"
+  },
+  {
+    "id": "59",
+    "name": "管弦乐琴乐谱：燃烧的灵魂",
+    "scene": "阿卡狄亚登天斗技场 轻量级3、阿卡狄亚零式登天斗技场 轻量级3",
+    "src": "阿卡狄亚登天斗技场 轻量级3]获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_729-燃烧的灵魂.ogg"
+  },
+  {
+    "id": "60",
+    "name": "管弦乐琴乐谱：孤注一掷",
+    "scene": "阿卡狄亚登天斗技场 轻量级4、阿卡狄亚零式登天斗技场 轻量级4",
+    "src": "阿卡狄亚登天斗技场 轻量级4获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_730-孤注一掷.ogg"
+  },
+  {
+    "id": "61",
+    "name": "管弦乐琴乐谱：危险的赌注",
+    "scene": "阿卡狄亚零式登天斗技场 轻量级4",
+    "src": "阿卡狄亚零式登天斗技场 轻量级4获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_731-危险的赌注.ogg"
+  },
+  {
+    "id": "62",
+    "name": "管弦乐琴乐谱：万魔",
+    "scene": "万魔殿正门",
+    "src": "将昔日的回忆送与你获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_748-万魔.ogg"
+  },
+  {
+    "id": "63",
+    "name": "管弦乐琴乐谱：朱诺大公国",
+    "scene": "朱诺下层",
+    "src": "前往朱诺获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_750-朱诺大公国.ogg"
+  },
+  {
+    "id": "64",
+    "name": "管弦乐琴乐谱：被遗忘的城市 - 塔布纳基亚地下壕",
+    "scene": "第七星历编年史：瓦纳·迪尔的回响剧情音乐",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_751-被遗忘的城市_-_塔布纳基亚地下壕.ogg"
+  },
+  {
+    "id": "65",
+    "name": "管弦乐琴乐谱：暗之王",
+    "scene": "朱诺：第一巡行",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_752-暗之王.ogg"
+  },
+  {
+    "id": "66",
+    "name": "管弦乐琴乐谱：灵魂深处",
+    "scene": "朱诺：第一巡行",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_753-灵魂深处.ogg"
+  },
+  {
+    "id": "67",
+    "name": "管弦乐琴乐谱：迷宫中的战斗",
+    "scene": "朱诺：第一巡行",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_754-迷宫中的战斗.ogg"
+  },
+  {
+    "id": "68",
+    "name": "管弦乐琴乐谱：迷宫中的战斗#3",
+    "scene": "朱诺：第一巡行",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_755-迷宫中的战斗-3.ogg"
+  },
+  {
+    "id": "69",
+    "name": "管弦乐琴乐谱：图·利亚",
+    "scene": "朱诺：第一巡行",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_756-图·利亚.ogg"
+  },
+  {
+    "id": "70",
+    "name": "管弦乐琴乐谱：战斗（最终幻想XI）",
+    "scene": "朱诺：第一巡行",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_757-战斗（最终幻想XI）.ogg"
+  },
+  {
+    "id": "71",
+    "name": "管弦乐琴乐谱：水晶战士",
+    "scene": "朱诺：第一巡行",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_758-水晶战士.ogg"
+  },
+  {
+    "id": "72",
+    "name": "管弦乐琴乐谱：兹瓦尔城",
+    "scene": "朱诺：第一巡行",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_759-兹瓦尔城.ogg"
+  },
+  {
+    "id": "73",
+    "name": "管弦乐琴乐谱：觉醒",
+    "scene": "朱诺：第一巡行",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_760-觉醒.ogg"
+  },
+  {
+    "id": "74",
+    "name": "管弦乐琴乐谱：瓦纳·迪尔进行曲",
+    "scene": "朱诺：第一巡行",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_761-瓦纳·迪尔进行曲.ogg"
+  },
+  {
+    "id": "75",
+    "name": "管弦乐琴乐谱：被分割的光",
+    "scene": "伊甸希望乐园 共鸣之章4、伊甸零式希望乐园 共鸣之章4、光暗未来绝境战",
+    "src": "乔纳森格里达尼亚旧街 (X: 10.6, Y: 6.3)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_747-被分割的光.ogg"
+  },
+  {
+    "id": "76",
+    "name": "管弦乐琴乐谱：忘却的此岸（古裔今罪：乐团版）",
+    "scene": "光暗未来绝境战",
+    "src": "乔纳森格里达尼亚旧街 (X: 10.6, Y: 6.3)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_746-忘却的此岸（古裔今罪：乐团版）.ogg"
+  },
+  {
+    "id": "77",
+    "name": "管弦乐琴乐谱：莫古房",
+    "scene": "暂无使用场景",
+    "src": "乔纳森格里达尼亚旧街 (X: 10.6, Y: 6.3)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_792-莫古房.ogg"
+  },
+  {
+    "id": "78",
+    "name": "管弦乐琴乐谱：跟着节奏跳起来",
+    "scene": "阿卡狄亚登天斗技场 中量级1、阿卡狄亚零式登天斗技场 中量级1",
+    "src": "阿卡狄亚登天斗技场 中量级1获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_780-跟着节奏跳起来.ogg"
+  },
+  {
+    "id": "79",
+    "name": "管弦乐琴乐谱：回到画板上",
+    "scene": "阿卡狄亚登天斗技场 中量级2、阿卡狄亚零式登天斗技场 中量级2",
+    "src": "阿卡狄亚登天斗技场 中量级2获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_781-回到画板上.ogg"
+  },
+  {
+    "id": "80",
+    "name": "管弦乐琴乐谱：从不畏惧",
+    "scene": "阿卡狄亚登天斗技场 中量级3、阿卡狄亚零式登天斗技场 中量级3",
+    "src": "阿卡狄亚登天斗技场 中量级3获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_782-从不畏惧.ogg"
+  },
+  {
+    "id": "81",
+    "name": "管弦乐琴乐谱：全力释放",
+    "scene": "阿卡狄亚登天斗技场 中量级4、阿卡狄亚零式登天斗技场 中量级4",
+    "src": "阿卡狄亚登天斗技场 中量级4获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_783-全力释放.ogg"
+  },
+  {
+    "id": "82",
+    "name": "管弦乐琴乐谱：无与伦比",
+    "scene": "阿卡狄亚零式登天斗技场 中量级4",
+    "src": "阿卡狄亚零式登天斗技场 中量级4获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_784-无与伦比.ogg"
+  },
+  {
+    "id": "83",
+    "name": "管弦乐琴乐谱：隆弗尔",
+    "scene": "桑多利亚：第二巡行",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_800-隆弗尔.ogg"
+  },
+  {
+    "id": "84",
+    "name": "管弦乐琴乐谱：艰苦的战斗",
+    "scene": "桑多利亚：第二巡行",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_801-艰苦的战斗.ogg"
+  },
+  {
+    "id": "85",
+    "name": "管弦乐琴乐谱：隐藏的真相",
+    "scene": "桑多利亚：第二巡行",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_830-隐藏的真相.ogg"
+  },
+  {
+    "id": "86",
+    "name": "管弦乐琴乐谱：艰苦的战斗#2",
+    "scene": "桑多利亚：第二巡行",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_802-艰苦的战斗-2.ogg"
+  },
+  {
+    "id": "87",
+    "name": "管弦乐琴乐谱：埃尔德纳修",
+    "scene": "桑多利亚：第二巡行",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_803-埃尔德纳修.ogg"
+  },
+  {
+    "id": "88",
+    "name": "管弦乐琴乐谱：信念",
+    "scene": "桑多利亚：第二巡行",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_804-信念.ogg"
+  },
+  {
+    "id": "89",
+    "name": "管弦乐琴乐谱：绝望（铭记于石）",
+    "scene": "第七星历编年史：瓦纳·迪尔的回响剧情音乐",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_805-绝望（铭记于石）.ogg"
+  },
+  {
+    "id": "90",
+    "name": "管弦乐琴乐谱：珠宝树枝",
+    "scene": "第七星历编年史：瓦纳·迪尔的回响剧情音乐",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_806-珠宝树枝.ogg"
+  },
+  {
+    "id": "91",
+    "name": "管弦乐琴乐谱：无望",
+    "scene": "第七星历编年史：瓦纳·迪尔的回响剧情音乐",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_807-无望.ogg"
+  },
+  {
+    "id": "92",
+    "name": "管弦乐琴乐谱：某时某处",
+    "scene": "第七星历编年史：瓦纳·迪尔的回响剧情音乐",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_808-某时某处.ogg"
+  },
+  {
+    "id": "93",
+    "name": "管弦乐琴乐谱：航海者",
+    "scene": "第七星历编年史：瓦纳·迪尔的回响剧情音乐",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_809-航海者.ogg"
+  },
+  {
+    "id": "94",
+    "name": "管弦乐琴乐谱：瓦纳·迪尔进行曲#2",
+    "scene": "第七星历编年史：瓦纳·迪尔的回响剧情音乐",
+    "src": "身处这个世界的你所愿为何？奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_810-瓦纳·迪尔进行曲-2.ogg"
+  },
+  {
+    "id": "95",
+    "name": "管弦乐琴乐谱：大家伙",
+    "scene": "第七星历编年史：瓦纳·迪尔的回响剧情音乐",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_811-大家伙.ogg"
+  },
+  {
+    "id": "96",
+    "name": "管弦乐琴乐谱：古斯塔堡",
+    "scene": "第七星历编年史：瓦纳·迪尔的回响剧情音乐",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_812-古斯塔堡.ogg"
+  },
+  {
+    "id": "97",
+    "name": "管弦乐琴乐谱：萨鲁塔巴鲁塔",
+    "scene": "第七星历编年史：瓦纳·迪尔的回响剧情音乐",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_813-萨鲁塔巴鲁塔.ogg"
+  },
+  {
+    "id": "98",
+    "name": "管弦乐琴乐谱：邪欲",
+    "scene": "阿卡狄亚登天斗技场 重量级1、阿卡狄亚零式登天斗技场 重量级1",
+    "src": "阿卡狄亚登天斗技场 重量级1获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_839-邪欲.ogg"
+  },
+  {
+    "id": "99",
+    "name": "管弦乐琴乐谱：镜中的自我",
+    "scene": "阿卡狄亚登天斗技场 重量级2、阿卡狄亚零式登天斗技场 重量级2",
+    "src": "阿卡狄亚登天斗技场 重量级2获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_840-镜中的自我.ogg"
+  },
+  {
+    "id": "100",
+    "name": "管弦乐琴乐谱：绝对霸道",
+    "scene": "阿卡狄亚登天斗技场 重量级3、阿卡狄亚零式登天斗技场 重量级3",
+    "src": "阿卡狄亚登天斗技场 重量级3获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_841-绝对霸道.ogg"
+  },
+  {
+    "id": "101",
+    "name": "管弦乐琴乐谱：Everything Burns",
+    "scene": "阿卡狄亚登天斗技场 重量级4、阿卡狄亚零式登天斗技场 重量级4",
+    "src": "阿卡狄亚登天斗技场 重量级4获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_842-Everything_Burns.ogg"
+  },
+  {
+    "id": "102",
+    "name": "管弦乐琴乐谱：天上的阿卡狄亚",
+    "scene": "阿卡狄亚零式登天斗技场 重量级4",
+    "src": "阿卡狄亚零式登天斗技场 重量级4获得",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_843-天上的阿卡狄亚.ogg"
+  },
+  {
+    "id": "103",
+    "name": "管弦乐琴乐谱：场间暂缓",
+    "scene": "九号解决方案 · 三尾训练馆与休息室",
+    "src": "亡国的大蛇奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_844-场间暂缓.ogg"
+  },
+  {
+    "id": "104",
+    "name": "管弦乐琴乐谱：朱诺 -星芒节-",
+    "scene": "朱诺下层",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_848-朱诺_-星芒节-.ogg"
+  },
+  {
+    "id": "105",
+    "name": "管弦乐琴乐谱：温达斯联邦",
+    "scene": "温达斯：第三巡行",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_877-温达斯联邦.ogg"
+  },
+  {
+    "id": "106",
+    "name": "管弦乐琴乐谱：淑女的盛宴",
+    "scene": "温达斯：第三巡行",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_878-淑女的盛宴.ogg"
+  },
+  {
+    "id": "107",
+    "name": "管弦乐琴乐谱：皇都的熙攘",
+    "scene": "温达斯：第三巡行",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_879-皇都的熙攘.ogg"
+  },
+  {
+    "id": "108",
+    "name": "管弦乐琴乐谱：宿命冲突 -防卫战-",
+    "scene": "温达斯：第三巡行",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_880-宿命冲突_-防卫战-.ogg"
+  },
+  {
+    "id": "109",
+    "name": "管弦乐琴乐谱：瓦纳·迪尔进行曲#4",
+    "scene": "温达斯：第三巡行",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_881-瓦纳·迪尔进行曲＃4.ogg"
+  },
+  {
+    "id": "110",
+    "name": "管弦乐琴乐谱：禁忌的封印",
+    "scene": "温达斯：第三巡行",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_882-禁忌的封印.ogg"
+  },
+  {
+    "id": "111",
+    "name": "管弦乐琴乐谱：诸神的黄昏",
+    "scene": "温达斯：第三巡行",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_883-诸神的黄昏.ogg"
+  },
+  {
+    "id": "112",
+    "name": "管弦乐琴乐谱：虚无大地",
+    "scene": "温达斯：第三巡行",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_884-虚无大地.ogg"
+  },
+  {
+    "id": "113",
+    "name": "管弦乐琴乐谱：神龙",
+    "scene": "温达斯：第三巡行",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_885-神龙.ogg"
+  },
+  {
+    "id": "114",
+    "name": "管弦乐琴乐谱：称王之龙",
+    "scene": "温达斯：第三巡行",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_886-称王之龙.ogg"
+  },
+  {
+    "id": "115",
+    "name": "管弦乐琴乐谱：第二颂歌：遥远之约",
+    "scene": "第七星历编年史：瓦纳·迪尔的回响剧情音乐",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_890-第二颂歌：遥远之约.ogg"
+  },
+  {
+    "id": "116",
+    "name": "管弦乐琴乐谱：第五颂歌：祈祷之时",
+    "scene": "第七星历编年史：瓦纳·迪尔的回响剧情音乐",
+    "src": "遥远的约定奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_887-第五颂歌：祈祷之时.ogg"
+  },
+  {
+    "id": "117",
+    "name": "管弦乐琴乐谱：从此美满",
+    "scene": "第七星历编年史：瓦纳·迪尔的回响剧情音乐",
+    "src": "遥远的约定奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_888-从此美满.ogg"
+  },
+  {
+    "id": "118",
+    "name": "管弦乐琴乐谱：最后一次",
+    "scene": "第七星历编年史：瓦纳·迪尔的回响剧情音乐",
+    "src": "遥远的约定奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_889-最后一次.ogg"
+  },
+  {
+    "id": "119",
+    "name": "管弦乐琴乐谱：最终幻想XI主题曲",
+    "scene": "第七星历编年史：瓦纳·迪尔的回响剧情音乐",
+    "src": "遥远的约定奖励",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_891-最终幻想XI主题曲.ogg"
+  },
+  {
+    "id": "120",
+    "name": "管弦乐琴乐谱：震天雷",
+    "scene": "第七星历编年史：瓦纳·迪尔的回响剧情音乐",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_892-震天雷.ogg"
+  },
+  {
+    "id": "121",
+    "name": "管弦乐琴乐谱：焦虑",
+    "scene": "第七星历编年史：瓦纳·迪尔的回响剧情音乐",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_893-焦虑.ogg"
+  },
+  {
+    "id": "122",
+    "name": "管弦乐琴乐谱：回想",
+    "scene": "第七星历编年史：瓦纳·迪尔的回响剧情音乐",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_894-回想.ogg"
+  },
+  {
+    "id": "123",
+    "name": "管弦乐琴乐谱：巴斯图克共和国",
+    "scene": "第七星历编年史：瓦纳·迪尔的回响剧情音乐",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_897-飞空艇.ogg"
+  },
+  {
+    "id": "124",
+    "name": "管弦乐琴乐谱：飞空艇（最终幻想XI）",
+    "scene": "第七星历编年史：瓦纳·迪尔的回响剧情音乐",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_895-桑多利亚王国.ogg"
+  },
+  {
+    "id": "125",
+    "name": "管弦乐琴乐谱：桑多利亚王国",
+    "scene": "第七星历编年史：瓦纳·迪尔的回响剧情音乐",
+    "src": "不可思议的哥布林族朱诺下层 (X: 6.5, Y: 5.2)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_896-巴斯图克共和国.ogg"
+  },
+  {
+    "id": "126",
+    "name": "管弦乐琴乐谱：妖星乱舞（遥远的世界）",
+    "scene": "妖星乱舞绝境战",
+    "src": "乔纳森格里达尼亚旧街 (X: 10.6, Y: 6.3)兑换",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_899-妖星乱舞（遥远的世界）.ogg"
+  }
+]

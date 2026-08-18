@@ -1,0 +1,622 @@
+import { useEffect, useMemo, useRef, useState } from 'react'
+import type { CSSProperties } from 'react'
+import { NOTES_CONFIG, PAGE_SIZE, TYPE_ORDER } from '../../constants'
+import type { ScoreItem } from '../../types'
+import { fetchScores, groupByType, loadOwned, saveOwned } from '../../utils/scores'
+import '../../styles/scores.css'
+
+const ALL = '全部'
+
+/** 背景音符符号池 */
+const NOTE_SYMBOLS = ['♪', '♫', '♩', '♬']
+
+/** 单个漂浮音符 */
+interface FloatingNote {
+  id: number
+  left: number
+  top: number
+  size: number
+  rise: number
+  duration: number
+  symbol: string
+}
+
+/** 随机生成一个音符（每次出现位置都重新随机） */
+function createNote(id: number): FloatingNote {
+  return {
+    id,
+    // 随机出现位置（全屏范围内）
+    left: Math.random() * 100,
+    top: 5 + Math.random() * 90,
+    size: 16 + Math.random() * 22,
+    // 原地上升的随机距离（像素）
+    rise: 50 + Math.random() * 30,
+    // 单个音符从出现到消失的时长（毫秒）
+    duration: 2000 + Math.random() * 1000,
+    symbol: NOTE_SYMBOLS[Math.floor(Math.random() * NOTE_SYMBOLS.length)],
+  }
+}
+
+/** 已获得标记的唯一标识：type-id 复合键（各分类文件 id 各自从 1 编号，会重复） */
+function ownedKey(item: ScoreItem): string {
+  return `${item.type}-${item.id}`
+}
+
+/** 编号补零为三位，如 1 → 001 */
+function formatId(id: string): string {
+  return id.padStart(3, '0')
+}
+
+/** 复制文本：优先 Clipboard API，被拒绝或不可用时降级 execCommand */
+async function copyText(text: string): Promise<void> {
+  try {
+    if (navigator.clipboard?.writeText) {
+      await navigator.clipboard.writeText(text)
+      return
+    }
+  } catch {
+    // Clipboard API 被拒绝（如权限不足），走降级路径
+  }
+  const ta = document.createElement('textarea')
+  ta.value = text
+  ta.style.position = 'fixed'
+  ta.style.opacity = '0'
+  document.body.appendChild(ta)
+  ta.select()
+  try {
+    if (!document.execCommand('copy')) {
+      throw new Error('execCommand copy failed')
+    }
+  } finally {
+    document.body.removeChild(ta)
+  }
+}
+
+/** 灰机 wiki 物品页地址（名称需 URL 编码） */
+function wikiUrl(name: string): string {
+  return `https://ff14.huijiwiki.com/wiki/物品:${encodeURIComponent(name)}`
+}
+
+function ScoresPage() {
+  const [scores, setScores] = useState<ScoreItem[]>([])
+  const [loadError, setLoadError] = useState('')
+  const [activeType, setActiveType] = useState(ALL)
+  const [query, setQuery] = useState('')
+  // 已获得筛选：all=全部 / owned=仅已获得 / notOwned=仅未获得
+  const [ownedFilter, setOwnedFilter] = useState<'all' | 'owned' | 'notOwned'>('all')
+  const [owned, setOwned] = useState<Set<string>>(() => loadOwned())
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE)
+  const [toast, setToast] = useState('')
+  const [selected, setSelected] = useState<ScoreItem | null>(null)
+  // 快速标记模式（仅具体分类下可用）：点击切换、按住拖动批量标记
+  const [quickMark, setQuickMark] = useState(false)
+  // 拖拽方向：按下时未标记→mark（划过全部标记），已标记→unmark（划过全部取消）
+  const [dragMode, setDragMode] = useState<'mark' | 'unmark' | null>(null)
+  // 一键标记确认弹窗（已标记/未标记混合时才弹出）
+  const [confirmMarkAll, setConfirmMarkAll] = useState(false)
+  const toastTimer = useRef<number | undefined>(undefined)
+  // 已获得集合的实时引用：批量操作连续触发时避免闭包拿到过期值
+  const ownedRef = useRef(owned)
+
+  // 背景音符：定时随机生成，动画结束后移除
+  const [notes, setNotes] = useState<FloatingNote[]>([])
+  const noteIdRef = useRef(0)
+  const activeCountRef = useRef(0)
+  const timersRef = useRef<number[]>([])
+
+  useEffect(() => {
+    const spawn = () => {
+      // 达到密度上限时跳过本次生成
+      if (activeCountRef.current >= NOTES_CONFIG.density) return
+      const id = ++noteIdRef.current
+      activeCountRef.current += 1
+      const note = createNote(id)
+      setNotes((prev) => [...prev, note])
+      // 动画结束后移除该音符
+      const timer = window.setTimeout(() => {
+        activeCountRef.current -= 1
+        setNotes((prev) => prev.filter((n) => n.id !== id))
+      }, note.duration)
+      timersRef.current.push(timer)
+    }
+    // 立即生成一批，让背景不至于空白
+    for (let i = 0; i < Math.min(6, NOTES_CONFIG.density); i++) spawn()
+    const interval = window.setInterval(spawn, NOTES_CONFIG.frequency)
+    return () => {
+      window.clearInterval(interval)
+      timersRef.current.forEach((t) => window.clearTimeout(t))
+      timersRef.current = []
+    }
+  }, [])
+
+  // 已获得集合与 ref 同步（拖拽批量操作使用实时引用）
+  useEffect(() => {
+    ownedRef.current = owned
+  }, [owned])
+
+  // 拖拽批量标记：松开鼠标即结束拖拽方向
+  useEffect(() => {
+    if (!dragMode) return
+    const endDrag = () => setDragMode(null)
+    window.addEventListener('mouseup', endDrag)
+    return () => window.removeEventListener('mouseup', endDrag)
+  }, [dragMode])
+
+  // 弹窗打开时锁定页面滚动，Esc 关闭
+  useEffect(() => {
+    if (!selected && !confirmMarkAll) return
+    document.body.style.overflow = 'hidden'
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setSelected(null)
+        setConfirmMarkAll(false)
+      }
+    }
+    window.addEventListener('keydown', onKey)
+    return () => {
+      document.body.style.overflow = ''
+      window.removeEventListener('keydown', onKey)
+    }
+  }, [selected, confirmMarkAll])
+
+  useEffect(() => {
+    fetchScores()
+      .then(setScores)
+      .catch(() => setLoadError('乐谱数据加载失败，请刷新页面重试'))
+  }, [])
+
+  // 按类型分组（顺序遵循 TYPE_ORDER）
+  const groups = useMemo(() => groupByType(scores, TYPE_ORDER), [scores])
+
+  // 过滤：类型 → 关键词（名称/场景/获得方法）→ 仅已获得
+  const filtered = useMemo(() => {
+    const kw = query.trim().toLowerCase()
+    let list = scores
+    if (activeType !== ALL) {
+      list = list.filter((s) => s.type === activeType)
+    }
+    if (kw) {
+      list = list.filter(
+        (s) =>
+          s.name.toLowerCase().includes(kw) ||
+          s.scene.toLowerCase().includes(kw) ||
+          s.src.toLowerCase().includes(kw),
+      )
+    }
+    if (ownedFilter === 'owned') {
+      list = list.filter((s) => owned.has(ownedKey(s)))
+    } else if (ownedFilter === 'notOwned') {
+      list = list.filter((s) => !owned.has(ownedKey(s)))
+    }
+    return list
+  }, [scores, activeType, query, ownedFilter, owned])
+
+  // 每个类型的已收集/总数统计
+  const typeStats = useMemo(() => {
+    const map = new Map<string, { owned: number; total: number }>()
+    for (const s of scores) {
+      const stat = map.get(s.type) ?? { owned: 0, total: 0 }
+      stat.total += 1
+      if (owned.has(ownedKey(s))) stat.owned += 1
+      map.set(s.type, stat)
+    }
+    return map
+  }, [scores, owned])
+
+  const visible = filtered.slice(0, visibleCount)
+
+  const showToast = (msg: string) => {
+    setToast(msg)
+    window.clearTimeout(toastTimer.current)
+    toastTimer.current = window.setTimeout(() => setToast(''), 1600)
+  }
+
+  // 切换单个已获得标记（通过 ref 实时读写，拖拽批量触发时不会拿到过期状态）
+  const toggleOwned = (key: string) => {
+    const next = new Set(ownedRef.current)
+    if (next.has(key)) {
+      next.delete(key)
+    } else {
+      next.add(key)
+    }
+    ownedRef.current = next
+    setOwned(next)
+    saveOwned(next)
+  }
+
+  // 快速标记：按下时立即切换当前项，并按按下时的状态决定拖拽方向
+  const handleSongMouseDown = (item: ScoreItem) => {
+    if (!quickMark) return
+    const key = ownedKey(item)
+    const willMark = !ownedRef.current.has(key)
+    toggleOwned(key)
+    setDragMode(willMark ? 'mark' : 'unmark')
+  }
+
+  // 快速标记：拖拽划过时按方向批量标记/取消
+  const handleSongMouseEnter = (item: ScoreItem) => {
+    if (!dragMode) return
+    const key = ownedKey(item)
+    const target = dragMode === 'mark'
+    if (ownedRef.current.has(key) !== target) {
+      toggleOwned(key)
+    }
+  }
+
+  // 当前结果是否全部已获得（决定「一键标记/取消」按钮的文案与行为）
+  const allOwned = useMemo(
+    () => filtered.length > 0 && filtered.every((s) => owned.has(ownedKey(s))),
+    [filtered, owned],
+  )
+
+  // 当前结果中已标记数量（确认弹窗文案用）
+  const ownedInFiltered = useMemo(
+    () => filtered.filter((s) => owned.has(ownedKey(s))).length,
+    [filtered, owned],
+  )
+
+  // 一键标记按钮：已标记/未标记同时存在时先弹出确认弹窗
+  const handleMarkAllClick = () => {
+    if (ownedInFiltered > 0 && !allOwned) {
+      setConfirmMarkAll(true)
+    } else {
+      handleMarkAll()
+    }
+  }
+
+  // 一键标记/取消当前分类下的全部结果
+  const handleMarkAll = () => {
+    const next = new Set(ownedRef.current)
+    for (const s of filtered) {
+      if (allOwned) {
+        next.delete(ownedKey(s))
+      } else {
+        next.add(ownedKey(s))
+      }
+    }
+    ownedRef.current = next
+    setOwned(next)
+    saveOwned(next)
+  }
+
+  // 点击行打开详情弹窗
+  const handleOpenDetail = (item: ScoreItem) => {
+    setSelected(item)
+  }
+
+  // 复制乐谱名称（弹窗内按钮）
+  const handleCopyName = async (item: ScoreItem) => {
+    try {
+      await copyText(item.name)
+      showToast(`已复制：${item.name}`)
+    } catch {
+      showToast('复制失败，请手动选择文本')
+    }
+  }
+
+  // 切换类型：重置渐进渲染；切回「全部」时退出快速标记（按钮只在具体分类下显示）
+  const handleTypeChange = (type: string) => {
+    setActiveType(type)
+    setVisibleCount(PAGE_SIZE)
+    if (type === ALL) setQuickMark(false)
+  }
+
+  return (
+    <>
+      {/* 网页棕色背景中的漂浮音符（位于相框之下，不遮挡内容） */}
+      <div className="notes-layer" aria-hidden="true">
+        {notes.map((n) => (
+          <span
+            key={n.id}
+            className="floating-note"
+            style={
+              {
+                left: `${n.left}%`,
+                top: `${n.top}%`,
+                fontSize: `${n.size}px`,
+                animationDuration: `${n.duration}ms`,
+                '--rise': `${n.rise}px`,
+                '--note-opacity': NOTES_CONFIG.opacity,
+              } as CSSProperties
+            }
+          >
+            {n.symbol}
+          </span>
+        ))}
+      </div>
+
+      <div className="outer-frame scores-frame">
+        <div className="panel">
+        <div className="orchestrion-banner">
+          <span className="orchestrion-text">Orchestrion</span>
+        </div>
+
+        {/* 标题 */}
+        <div className="header">
+          <div className="header-title-box">
+            <h1>管弦乐琴乐谱集</h1>
+          </div>
+        </div>
+
+        {loadError ? (
+          <div className="scores-error">{loadError}</div>
+        ) : (
+          <>
+            {/* 类型导航 */}
+            <nav className="type-nav" aria-label="乐谱分类">
+              <button
+                type="button"
+                className={`type-btn${activeType === ALL ? ' active' : ''}`}
+                onClick={() => handleTypeChange(ALL)}
+              >
+                全部
+                <span className="type-count">{scores.length}</span>
+              </button>
+              {groups.map((g) => (
+                <button
+                  key={g.type}
+                  type="button"
+                  className={`type-btn${activeType === g.type ? ' active' : ''}`}
+                  onClick={() => handleTypeChange(g.type)}
+                >
+                  {g.type}
+                  <span className="type-count">{g.items.length}</span>
+                </button>
+              ))}
+            </nav>
+
+            {/* 搜索与筛选 */}
+            <div className="filter-row">
+              <input
+                className="search-input"
+                type="search"
+                placeholder="搜索乐谱名称 / 场景 / 获得方法"
+                value={query}
+                onChange={(e) => {
+                  setQuery(e.target.value)
+                  setVisibleCount(PAGE_SIZE)
+                }}
+              />
+              <button
+                type="button"
+                className={`filter-toggle${ownedFilter === 'all' ? '' : ' active'}`}
+                aria-label="切换显示范围：全部 / 已获得 / 未获得"
+                onClick={() => {
+                  setOwnedFilter((f) =>
+                    f === 'all' ? 'owned' : f === 'owned' ? 'notOwned' : 'all',
+                  )
+                  setVisibleCount(PAGE_SIZE)
+                }}
+              >
+                显示：{ownedFilter === 'all' ? '全部' : ownedFilter === 'owned' ? '已获得' : '未获得'}
+              </button>
+              {/* 快速标记：仅具体分类下显示，点击进入批量标记模式 */}
+              {activeType !== ALL && (
+                <button
+                  type="button"
+                  className={`quick-mark-toggle${quickMark ? ' active' : ''}`}
+                  aria-pressed={quickMark}
+                  onClick={() => setQuickMark((q) => !q)}
+                >
+                  {quickMark ? '退出快速标记' : '快速标记'}
+                </button>
+              )}
+            </div>
+
+            {/* 快速标记提示条 */}
+            {quickMark && (
+              <div className="quick-mark-bar">
+                <span className="quick-mark-hint">
+                  点击切换标记 · 按住鼠标拖动可批量标记/取消
+                </span>
+                <button
+                  type="button"
+                  className="quick-mark-all"
+                  disabled={filtered.length === 0}
+                  onClick={handleMarkAllClick}
+                >
+                  {allOwned ? '一键取消标记' : '一键标记全部'}
+                </button>
+              </div>
+            )}
+
+            {/* 结果统计 */}
+            <div className="result-row">
+              <span className="area-label">
+                {activeType === ALL ? '全部乐谱' : activeType} · {filtered.length} 首
+              </span>
+              <span className="result-hint">
+                已收集{' '}
+                {activeType === ALL
+                  ? scores.filter((s) => owned.has(ownedKey(s))).length
+                  : typeStats.get(activeType)?.owned ?? 0}
+                /{activeType === ALL ? scores.length : typeStats.get(activeType)?.total ?? 0}
+              </span>
+            </div>
+
+            {/* 乐谱列表 */}
+            {visible.length === 0 ? (
+              <div className="scores-empty">没有符合条件的结果</div>
+            ) : (
+              <div className="song-grid">
+                {visible.map((item) => {
+                  const isOwned = owned.has(ownedKey(item))
+                  const shortName = item.name.replace(/^管弦乐琴乐谱：/, '')
+                  return (
+                    <div
+                      key={ownedKey(item)}
+                      className={`song-item${isOwned ? ' owned' : ''}${quickMark ? ' quick-marking' : ''}`}
+                      onClick={() => {
+                        // 普通模式点击打开详情；快速标记模式下按下时已切换状态，这里不再重复处理
+                        if (!quickMark) handleOpenDetail(item)
+                      }}
+                      onMouseDown={() => handleSongMouseDown(item)}
+                      onMouseEnter={() => handleSongMouseEnter(item)}
+                      title={quickMark ? '点击切换标记 · 按住拖动批量标记' : '点击查看详情'}
+                    >
+                      <span className="song-id">{formatId(item.id)}</span>
+                      <span className="song-main">
+                        <span className="song-name">{shortName}</span>
+                        {item.scene && <span className="song-scene">{item.scene}</span>}
+                      </span>
+                    </div>
+                  )
+                })}
+              </div>
+            )}
+
+            {/* 显示更多 */}
+            {visible.length < filtered.length && (
+              <div className="load-more-row">
+                <button
+                  type="button"
+                  className="load-more-btn"
+                  onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
+                >
+                  显示更多（剩余 {filtered.length - visible.length} 条）
+                </button>
+              </div>
+            )}
+          </>
+        )}
+
+        {/* 底部说明 */}
+        <div className="footer-box">
+          <div className="footer-title">使用说明</div>
+          <div className="footer-content">
+            点击乐谱可查看详情、跳转灰机WIKI，详情中可标记已获得；分类下还可使用「快速标记」点击/拖动批量操作，记录保存在本地，刷新后仍然有效。
+            <br />
+            数据来自
+            <a
+              href="https://ff14.huijiwiki.com/wiki/管弦乐琴乐谱集/乐谱一览"
+              target="_blank"
+              rel="noreferrer"
+            >
+              最终幻想XIV中文维基-管弦乐琴乐谱集/乐谱一览
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* 乐谱详情弹窗 */}
+      {selected && (
+        <div
+          className="modal-overlay"
+          onClick={() => setSelected(null)}
+        >
+          <div
+            className="modal-card"
+            role="dialog"
+            aria-modal="true"
+            aria-label={selected.name}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="modal-close"
+              aria-label="关闭"
+              onClick={() => setSelected(null)}
+            >
+              ×
+            </button>
+            <div className="modal-title">{selected.name}</div>
+            <div className="modal-body">
+              <div className="modal-row">
+                <span className="modal-label">编号</span>
+                <span className="modal-value">{formatId(selected.id)}</span>
+              </div>
+              <div className="modal-row">
+                <span className="modal-label">类型</span>
+                <span className="modal-value">{selected.type}</span>
+              </div>
+              {selected.scene && (
+                <div className="modal-row">
+                  <span className="modal-label">场景</span>
+                  <span className="modal-value">{selected.scene}</span>
+                </div>
+              )}
+              <div className="modal-row">
+                <span className="modal-label">获得方法</span>
+                <span className="modal-value">{selected.src}</span>
+              </div>
+            </div>
+            <div className="modal-actions">
+              <button
+                type="button"
+                className={`modal-mark${owned.has(ownedKey(selected)) ? ' checked' : ''}`}
+                onClick={() => toggleOwned(ownedKey(selected))}
+              >
+                {owned.has(ownedKey(selected)) ? '取消标记' : '标记为已获得'}
+              </button>
+              <a
+                className="modal-link"
+                href={wikiUrl(selected.name)}
+                target="_blank"
+                rel="noreferrer"
+              >
+                WIKI（试听）
+              </a>
+              <button
+                type="button"
+                className="modal-copy"
+                onClick={() => handleCopyName(selected)}
+              >
+                复制名称
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* 一键标记确认弹窗 */}
+      {confirmMarkAll && (
+        <div
+          className="modal-overlay"
+          onClick={() => setConfirmMarkAll(false)}
+        >
+          <div
+            className="modal-card"
+            role="alertdialog"
+            aria-modal="true"
+            aria-label="确认一键标记全部"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="modal-title">确认一键标记全部</div>
+            <div className="modal-body">
+              <p className="confirm-text">
+                当前分类下已标记 {ownedInFiltered} 首、未标记 {filtered.length - ownedInFiltered}{' '}
+                首。
+                <br />
+                确定将未标记的 {filtered.length - ownedInFiltered} 首全部标记为已获得吗？
+              </p>
+            </div>
+            <div className="modal-actions">
+              <button
+                type="button"
+                className="modal-copy"
+                onClick={() => setConfirmMarkAll(false)}
+              >
+                取消
+              </button>
+              <button
+                type="button"
+                className="modal-confirm"
+                onClick={() => {
+                  handleMarkAll()
+                  setConfirmMarkAll(false)
+                }}
+              >
+                确认标记
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {toast && <div className="toast">{toast}</div>}
+      </div>
+    </>
+  )
+}
+
+export default ScoresPage

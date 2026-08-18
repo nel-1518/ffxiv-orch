@@ -1,0 +1,531 @@
+/* ========== 乐谱记录页 ========== */
+
+.scores-frame {
+  max-width: 960px;
+  /* 置于背景音符层之上 */
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== 页面棕色背景中的漂浮音符 ===== */
+.notes-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 0; /* 位于相框之下，仅出现在棕色页面背景中，不遮挡内容 */
+  overflow: hidden;
+  pointer-events: none;
+}
+.floating-note {
+  position: absolute;
+  opacity: 0;
+  color: #d9cca3; /* 浅羊皮纸色，在棕色背景上清晰可见 */
+  line-height: 1;
+  user-select: none;
+  /* 每个音符只播放一次，结束状态保持到被移除 */
+  animation: note-rise linear both;
+  will-change: transform, opacity;
+}
+/* 原地上升一段随机距离后渐隐（位置由内联 top/left 决定，上升用 translate 避免影响布局） */
+@keyframes note-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  12% {
+    opacity: var(--note-opacity, 0.3);
+  }
+  80% {
+    opacity: var(--note-opacity, 0.3);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(calc(-1 * var(--rise, 40px)));
+  }
+}
+
+/* 类型导航 */
+.type-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  background: rgba(200, 180, 150, 0.2);
+  padding: 12px;
+  border-radius: 20px;
+  border: 1px solid #ccb599;
+}
+.type-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  background: #8e775c;
+  color: #d9cca3;
+  font-size: 13px;
+  border-radius: 999px;
+  /* 透明边框占位：active 时切换为高亮边框不改变按钮尺寸，避免布局跳动 */
+  border: 1px solid transparent;
+  box-shadow:
+    inset 0 -3px 0 #5a4a38,
+    0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s;
+}
+.type-btn .type-count {
+  font-family: var(--mono);
+  font-size: 11px;
+  background: rgba(0, 0, 0, 0.22);
+  border-radius: 999px;
+  padding: 0 6px;
+  line-height: 16px;
+}
+.type-btn:hover:not(.active) {
+  background: #9e876b;
+}
+.type-btn.active {
+  background: #a5876a;
+  color: #fff;
+  border: 1px solid #e2eef9;
+  box-shadow:
+    0 0 10px rgba(214, 225, 238, 0.8),
+    inset 0 -3px 0 #5a4a38;
+}
+
+/* 搜索与筛选行 */
+.filter-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #c9b99a;
+  flex-wrap: wrap;
+}
+.search-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 8px 14px;
+  font-size: 14px;
+  color: var(--text-mid);
+  background: #fbf3e0;
+  border: 1px solid var(--panel-border);
+  border-radius: 8px;
+  box-shadow: inset 0 1px 3px rgba(150, 100, 50, 0.2);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.search-input:focus {
+  border-color: var(--accent-blue-light);
+}
+.filter-toggle {
+  font-size: 13px;
+  color: var(--text-mid);
+  padding: 6px 14px;
+  white-space: nowrap;
+  background: #fbf3e0;
+  border: 1px solid var(--panel-border);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.filter-toggle:hover {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+}
+.filter-toggle.active {
+  color: #fff;
+  background: var(--accent-gold);
+  border-color: var(--accent-gold);
+}
+/* 快速标记入口按钮（仅具体分类下显示） */
+.quick-mark-toggle {
+  font-size: 13px;
+  color: var(--text-mid);
+  padding: 6px 14px;
+  white-space: nowrap;
+  background: #fbf3e0;
+  border: 1px solid var(--panel-border);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.quick-mark-toggle:hover {
+  border-color: var(--accent-blue-light);
+  color: var(--accent-blue-light);
+}
+.quick-mark-toggle.active {
+  color: #fff;
+  background: var(--accent-blue-light);
+  border-color: var(--accent-blue-light);
+}
+
+/* 快速标记提示条 */
+.quick-mark-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+  padding: 8px 14px;
+  background: rgba(165, 135, 106, 0.15);
+  border: 1px dashed var(--accent-gold);
+  border-radius: 8px;
+}
+.quick-mark-hint {
+  font-size: 12px;
+  color: var(--text-mid);
+}
+.quick-mark-all {
+  font-size: 13px;
+  color: #fff;
+  padding: 6px 16px;
+  white-space: nowrap;
+  background: var(--accent-gold);
+  border-radius: 999px;
+  box-shadow:
+    inset 0 -3px 0 rgba(90, 74, 56, 0.55),
+    0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s;
+}
+.quick-mark-all:hover:not(:disabled) {
+  filter: brightness(1.08);
+}
+.quick-mark-all:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 结果统计行 */
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 12px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.area-label {
+  font-size: 14px;
+  color: var(--accent-blue-light);
+  font-weight: bold;
+}
+.result-hint {
+  font-size: 12px;
+  color: var(--text-faint);
+}
+
+/* 乐谱列表（网格） */
+.song-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 40px;
+  row-gap: 6px;
+  margin-bottom: 16px;
+  padding: 0 4px;
+  min-width: 0;
+}
+.song-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-dark);
+  padding: 5px 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+  min-height: 30px;
+}
+.song-item:hover {
+  background: rgba(165, 135, 106, 0.18);
+}
+
+/* 已获得行高亮（在详情弹窗/快速标记中切换状态） */
+.song-item.owned {
+  background: rgba(165, 135, 106, 0.16);
+  outline: 1px solid rgba(165, 135, 106, 0.45);
+}
+/* 快速标记模式：禁止选中文本，拖拽更顺滑 */
+.song-item.quick-marking {
+  user-select: none;
+  -webkit-user-select: none;
+}
+.song-item.quick-marking:hover {
+  background: rgba(165, 135, 106, 0.3);
+}
+
+.song-id {
+  flex: 0 0 auto;
+  width: 34px;
+  color: var(--text-light);
+  font-weight: bold;
+  font-family: var(--mono);
+  font-size: 12px;
+}
+.song-main {
+  flex: 1;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  min-width: 0;
+}
+.song-name {
+  letter-spacing: 0.5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.song-scene {
+  font-size: 12px;
+  color: var(--text-faint);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 40%;
+}
+
+/* 空结果 / 错误 */
+.scores-empty,
+.scores-error {
+  text-align: center;
+  padding: 40px 0;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+/* 显示更多 */
+.load-more-row {
+  text-align: center;
+  margin-bottom: 16px;
+}
+.load-more-btn {
+  padding: 9px 30px;
+  background: #8e775c;
+  color: #f2e6ce;
+  font-size: 14px;
+  border-radius: 999px;
+  box-shadow:
+    inset 0 -3px 0 #5a4a38,
+    0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s;
+}
+.load-more-btn:hover {
+  background: #a5876a;
+  color: #fff;
+}
+
+/* Toast 提示 */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  max-width: 90vw;
+  padding: 10px 22px;
+  background: #36281e;
+  color: #f2e6ce;
+  font-size: 14px;
+  border-radius: 10px;
+  border: 1px solid #785f4c;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  animation: toast-in 0.2s ease-out;
+  pointer-events: none;
+}
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* 移动端：单列 */
+@media (max-width: 640px) {
+  .type-nav {
+    gap: 6px;
+    padding: 10px 8px;
+    border-radius: 14px;
+  }
+  .type-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  .song-grid {
+    grid-template-columns: minmax(0, 1fr);
+    column-gap: 0;
+  }
+  .result-hint {
+    display: none;
+  }
+}
+
+/* ========== 乐谱详情弹窗 ========== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(34, 26, 19, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 200;
+  animation: modal-fade 0.2s ease-out;
+}
+.modal-card {
+  background: var(--panel-bg);
+  border: 2px solid var(--panel-border);
+  border-radius: 10px;
+  box-shadow:
+    inset 0 0 20px rgba(150, 100, 50, 0.3),
+    0 12px 32px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 560px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 22px 26px 24px;
+  position: relative;
+  animation: modal-pop 0.22s ease-out;
+}
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--text-light);
+  padding: 4px 9px;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+.modal-close:hover {
+  color: var(--text-dark);
+  background: rgba(165, 135, 106, 0.25);
+}
+.modal-title {
+  font-family: var(--title-serif);
+  font-size: 19px;
+  color: var(--text-mid);
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding-right: 30px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--panel-border);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+.modal-row {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.modal-label {
+  flex: 0 0 64px;
+  color: var(--text-faint);
+  font-size: 13px;
+}
+.modal-value {
+  flex: 1;
+  color: var(--text-dark);
+  word-break: break-all;
+  /* 保留数据中的换行符（\n），如「获得方法」多行时自动换行显示 */
+  white-space: pre-line;
+}
+.modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.modal-link,
+.modal-copy,
+.modal-mark,
+.modal-confirm {
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  box-shadow:
+    inset 0 -3px 0 #5a4a38,
+    0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s;
+}
+/* 一键标记确认弹窗：确认按钮（金色主操作） */
+.modal-confirm {
+  background: var(--accent-gold);
+  color: #fff;
+}
+.modal-confirm:hover {
+  filter: brightness(1.08);
+}
+/* 一键标记确认弹窗正文 */
+.confirm-text {
+  font-size: 14px;
+  color: var(--text-dark);
+  line-height: 1.8;
+}
+/* 详情弹窗：标记/取消标记按钮（金色主操作；已获得时变灰提示可取消） */
+.modal-mark {
+  background: var(--accent-gold);
+  color: #fff;
+}
+.modal-mark:hover:not(.checked) {
+  filter: brightness(1.08);
+}
+.modal-mark.checked {
+  background: #8e775c;
+  color: #f2e6ce;
+}
+.modal-mark.checked:hover {
+  background: #a5876a;
+  color: #fff;
+}
+.modal-link {
+  background: #8e775c;
+  color: #f2e6ce;
+}
+.modal-link:hover {
+  background: #a5876a;
+  color: #fff;
+}
+.modal-copy {
+  background: #c9aa83;
+  color: var(--text-mid);
+}
+.modal-copy:hover {
+  background: #bfa482;
+  color: var(--text-dark);
+}
+
+@keyframes modal-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes modal-pop {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

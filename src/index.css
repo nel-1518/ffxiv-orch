@@ -1,0 +1,104 @@
+/* ========== 全局重置与主题变量 ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 艾欧泽亚符文装饰字体（public/fonts） */
+@font-face {
+  font-family: 'Eorzean';
+  src: url('/fonts/AugmentedNeo-Eorzean-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* a.html 复古羊皮纸配色 */
+  --bg-dark: #221a13;
+  --bg-mid: #36281e;
+  --bg-light: #534135;
+  --frame-border: #785f4c;
+  --panel-bg: #f2e6ce;
+  --panel-border: #c9aa83;
+  --panel-shadow: rgba(150, 100, 50, 0.3);
+  --text-dark: #241d14;
+  --text-mid: #4a3523;
+  --text-light: #5f5242;
+  --text-faint: #8e7a63;
+  --accent-blue: #2b5278;
+  --accent-blue-light: #3d576b;
+  --accent-gold: #a5876a;
+  --title-serif: 'Times New Roman', 'Songti SC', serif;
+  --sans: 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+  --mono: ui-monospace, Consolas, 'Courier New', monospace;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-mid);
+  background-image: radial-gradient(circle at center, var(--bg-light) 0%, var(--bg-dark) 100%);
+  background-attachment: fixed;
+  color: var(--text-dark);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 12px;
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.25);
+}
+::-webkit-scrollbar-thumb {
+  background: #aa9a86;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8e7a63;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+input,
+select {
+  font-family: inherit;
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+  #root {
+    padding: 10px 6px;
+  }
+}

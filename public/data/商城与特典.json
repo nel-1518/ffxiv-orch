@@ -1,0 +1,856 @@
+[
+  {
+    "id": "1",
+    "name": "管弦乐琴乐谱：无边无际（身心二元）",
+    "scene": "",
+    "src": "官方运营活动",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_123-无边无际（身心二元）.ogg"
+  },
+  {
+    "id": "2",
+    "name": "管弦乐琴乐谱：不屈之刃（身心二元）",
+    "scene": "",
+    "src": "官方运营活动",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_124-不屈之刃（身心二元）.ogg"
+  },
+  {
+    "id": "3",
+    "name": "管弦乐琴乐谱：究极神兵（交响乐版）",
+    "scene": "",
+    "src": "官方运营活动",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_200-究极神兵（交响乐版）.ogg"
+  },
+  {
+    "id": "4",
+    "name": "管弦乐琴乐谱：英杰（交响乐版）",
+    "scene": "",
+    "src": "官方运营活动",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_201-英杰（交响乐版）.ogg"
+  },
+  {
+    "id": "5",
+    "name": "管弦乐琴乐谱：白银凶鸟展翅翱翔（交响乐版）",
+    "scene": "",
+    "src": "道具商城",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_251-白银凶鸟展翅翱翔（交响乐版）.ogg"
+  },
+  {
+    "id": "6",
+    "name": "管弦乐琴乐谱：复仇的怒嚎（交响乐版）",
+    "scene": "",
+    "src": "道具商城",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_252-复仇的怒嚎（交响乐版）.ogg"
+  },
+  {
+    "id": "7",
+    "name": "管弦乐琴乐谱：忘却的彼岸（交响乐版）",
+    "scene": "",
+    "src": "道具商城",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_253-忘却的彼岸（交响乐版）.ogg"
+  },
+  {
+    "id": "8",
+    "name": "管弦乐琴乐谱：沉静（交响乐版）",
+    "scene": "",
+    "src": "道具商城",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_281-沉静（交响乐版）.ogg"
+  },
+  {
+    "id": "9",
+    "name": "管弦乐琴乐谱：灾厄蔓延（交响乐版）",
+    "scene": "",
+    "src": "道具商城",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_282-灾厄蔓延（交响乐版）.ogg"
+  },
+  {
+    "id": "10",
+    "name": "管弦乐琴乐谱：凶兆（交响乐版）",
+    "scene": "",
+    "src": "道具商城",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_283-凶兆（交响乐版）.ogg"
+  },
+  {
+    "id": "11",
+    "name": "管弦乐琴乐谱：彼岸花开（芯片音乐版）",
+    "scene": "",
+    "src": "暂无",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_279-彼岸花开（芯片音乐版）.ogg"
+  },
+  {
+    "id": "12",
+    "name": "管弦乐琴乐谱：神龙见尾（芯片音乐版）",
+    "scene": "",
+    "src": "暂无",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_278-神龙见尾（芯片音乐版）.ogg"
+  },
+  {
+    "id": "13",
+    "name": "管弦乐琴乐谱：起义（蛮荒神影）",
+    "scene": "",
+    "src": "暂无",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_285-起义（蛮荒神影）.ogg"
+  },
+  {
+    "id": "14",
+    "name": "管弦乐琴乐谱：忘却的彼岸（GUNN演唱版）",
+    "scene": "",
+    "src": "官方运营活动",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_286-忘却的彼岸（GUNN演唱版）.ogg"
+  },
+  {
+    "id": "15",
+    "name": "管弦乐琴乐谱：华彩的山麓（交响乐版）",
+    "scene": "",
+    "src": "道具商城",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_313-华彩的山麓（交响乐版）.ogg"
+  },
+  {
+    "id": "16",
+    "name": "管弦乐琴乐谱：无限循环（交响乐版）",
+    "scene": "",
+    "src": "道具商城",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_314-无限循环（交响乐版）.ogg"
+  },
+  {
+    "id": "17",
+    "name": "管弦乐琴乐谱：神龙见尾（星海旅途）",
+    "scene": "",
+    "src": "暂无",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_315-神龙见尾（星海旅途）.ogg"
+  },
+  {
+    "id": "18",
+    "name": "管弦乐琴乐谱：逃亡（星海旅途）",
+    "scene": "",
+    "src": "暂无",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_316-逃亡（星海旅途）.ogg"
+  },
+  {
+    "id": "19",
+    "name": "管弦乐琴乐谱：月读命之歌（交响乐版）",
+    "scene": "",
+    "src": "官方运营活动",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_369-月读命之歌（交响乐版）.ogg"
+  },
+  {
+    "id": "20",
+    "name": "管弦乐琴乐谱：神龙见尾（交响乐版）",
+    "scene": "",
+    "src": "官方运营活动",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_370-神龙见尾（交响乐版）.ogg"
+  },
+  {
+    "id": "21",
+    "name": "管弦乐琴乐谱：幽冥水底（古裔今罪）",
+    "scene": "",
+    "src": "官方运营活动",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_406-幽冥水底（古裔今罪）.ogg"
+  },
+  {
+    "id": "22",
+    "name": "管弦乐琴乐谱：一瞬千里（古裔今罪：乐团版）",
+    "scene": "",
+    "src": "暂无",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_407-一瞬千里（古裔今罪：乐团版）.ogg"
+  },
+  {
+    "id": "23",
+    "name": "管弦乐琴乐谱：希望之都（钢琴集）",
+    "scene": "",
+    "src": "道具商城",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_392-希望之都（钢琴集）.ogg"
+  },
+  {
+    "id": "24",
+    "name": "管弦乐琴乐谱：水车低鸣（钢琴集）",
+    "scene": "",
+    "src": "道具商城",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_404-水车低鸣（钢琴集）.ogg"
+  },
+  {
+    "id": "25",
+    "name": "管弦乐琴乐谱：伟大的母港（钢琴集）",
+    "scene": "",
+    "src": "道具商城",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_397-伟大的母港（钢琴集）.ogg"
+  },
+  {
+    "id": "26",
+    "name": "管弦乐琴乐谱：凶兆（钢琴集）",
+    "scene": "",
+    "src": "道具商城",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_398-凶兆（钢琴集）.ogg"
+  },
+  {
+    "id": "27",
+    "name": "管弦乐琴乐谱：夜雾缭绕（钢琴集）",
+    "scene": "",
+    "src": "道具商城",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_399-夜雾缭绕（钢琴集）.ogg"
+  },
+  {
+    "id": "28",
+    "name": "管弦乐琴乐谱：华彩的山麓（钢琴集）",
+    "scene": "",
+    "src": "道具商城",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_401-华彩的山麓（钢琴集）.ogg"
+  },
+  {
+    "id": "29",
+    "name": "管弦乐琴乐谱：乘上西风（钢琴集）",
+    "scene": "",
+    "src": "道具商城",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_396-乘上西风（钢琴集）.ogg"
+  },
+  {
+    "id": "30",
+    "name": "管弦乐琴乐谱：沉静（钢琴集）",
+    "scene": "",
+    "src": "道具商城",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_391-沉静（钢琴集）.ogg"
+  },
+  {
+    "id": "31",
+    "name": "管弦乐琴乐谱：灼热之地（钢琴集）",
+    "scene": "",
+    "src": "道具商城",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_402-灼热之地（钢琴集）.ogg"
+  },
+  {
+    "id": "32",
+    "name": "管弦乐琴乐谱：不灭孤念（古裔今罪：钢琴版）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_456-不灭孤念（古裔今罪：钢琴版）.ogg"
+  },
+  {
+    "id": "33",
+    "name": "管弦乐琴乐谱：明日与未来（古裔今罪：Amanda Achen演唱版）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_457-明日与未来（古裔今罪：Amanda_Achen演唱版）.ogg"
+  },
+  {
+    "id": "34",
+    "name": "管弦乐琴乐谱：忘却的此岸（古裔今罪：Amanda Achen演唱版）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_458-忘却的此岸（古裔今罪：Amanda_Achen演唱版）.ogg"
+  },
+  {
+    "id": "35",
+    "name": "管弦乐琴乐谱：天使醒来（古裔今罪：Amanda Achen演唱版）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_459-天使醒来（古裔今罪：Amanda_Achen演唱版）.ogg"
+  },
+  {
+    "id": "36",
+    "name": "管弦乐琴乐谱：一瞬千里（古裔今罪：钢琴版）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_460-一瞬千里（古裔今罪：钢琴版）.ogg"
+  },
+  {
+    "id": "37",
+    "name": "管弦乐琴乐谱：平衡（古裔今罪：乐团版）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_461-平衡（古裔今罪：乐团版）.ogg"
+  },
+  {
+    "id": "38",
+    "name": "管弦乐琴乐谱：天使醒来（古裔今罪：乐团版）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_462-天使醒来（古裔今罪：乐团版）.ogg"
+  },
+  {
+    "id": "39",
+    "name": "管弦乐琴乐谱：暗影使者（古裔今罪：乐团版）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_463-暗影使者（古裔今罪：乐团版）.ogg"
+  },
+  {
+    "id": "40",
+    "name": "管弦乐琴乐谱：耀眼浪苍（古裔今罪：乐团版）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_464-耀眼浪苍（古裔今罪：乐团版）.ogg"
+  },
+  {
+    "id": "41",
+    "name": "管弦乐琴乐谱：贪欲（古裔今罪：乐团版）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_465-贪欲（古裔今罪：乐团版）.ogg"
+  },
+  {
+    "id": "42",
+    "name": "管弦乐琴乐谱：起义（脉动电音）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_466-起义（脉动电音）.ogg"
+  },
+  {
+    "id": "43",
+    "name": "管弦乐琴乐谱：混沌的漩涡（脉动电音）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_467-混沌的漩涡（脉动电音）.ogg"
+  },
+  {
+    "id": "44",
+    "name": "管弦乐琴乐谱：幽冥水底（脉动电音）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_468-幽冥水底（脉动电音）.ogg"
+  },
+  {
+    "id": "45",
+    "name": "管弦乐琴乐谱：天使醒来（脉动电音）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_469-天使醒来（脉动电音）.ogg"
+  },
+  {
+    "id": "46",
+    "name": "管弦乐琴乐谱：千年旭光（脉动电音）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_470-千年旭光（脉动电音）.ogg"
+  },
+  {
+    "id": "47",
+    "name": "管弦乐琴乐谱：万世箴言（钢琴集）",
+    "scene": "",
+    "src": "道具商城",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_393-万世箴言（钢琴集）.ogg"
+  },
+  {
+    "id": "48",
+    "name": "管弦乐琴乐谱：英杰（钢琴集）",
+    "scene": "",
+    "src": "道具商城",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_394-英杰（钢琴集）.ogg"
+  },
+  {
+    "id": "49",
+    "name": "管弦乐琴乐谱：古伤（钢琴集）",
+    "scene": "",
+    "src": "道具商城",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_400-古伤（钢琴集）.ogg"
+  },
+  {
+    "id": "50",
+    "name": "管弦乐琴乐谱：深宵之海（钢琴集）",
+    "scene": "",
+    "src": "道具商城",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_395-深宵之海（钢琴集）.ogg"
+  },
+  {
+    "id": "51",
+    "name": "管弦乐琴乐谱：异想天开（钢琴集）",
+    "scene": "",
+    "src": "道具商城",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_403-异想天开（钢琴集）.ogg"
+  },
+  {
+    "id": "52",
+    "name": "管弦乐琴乐谱：红色夜阑（钢琴集）",
+    "scene": "",
+    "src": "道具商城",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_405-红色夜阑（钢琴集）.ogg"
+  },
+  {
+    "id": "53",
+    "name": "管弦乐琴乐谱：近在天边（超越暗影）",
+    "scene": "",
+    "src": "暂无",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_546-近在天边（超越暗影）.ogg"
+  },
+  {
+    "id": "54",
+    "name": "管弦乐琴乐谱：此处有狮（超越暗影）",
+    "scene": "",
+    "src": "暂无",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_547-此处有狮（超越暗影）.ogg"
+  },
+  {
+    "id": "55",
+    "name": "管弦乐琴乐谱：末路尽头（交响乐版）",
+    "scene": "",
+    "src": "暂无",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_575-末路尽头（交响乐版）.ogg"
+  },
+  {
+    "id": "56",
+    "name": "管弦乐琴乐谱：生如归流（交响乐版）",
+    "scene": "",
+    "src": "暂无",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_576-生如归流（交响乐版）.ogg"
+  },
+  {
+    "id": "57",
+    "name": "管弦乐琴乐谱：暗影使者（交响乐版）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_624-暗影使者（交响乐版）.ogg"
+  },
+  {
+    "id": "58",
+    "name": "管弦乐琴乐谱：呼唤终结之神（交响乐版）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_625-呼唤终结之神（交响乐版）.ogg"
+  },
+  {
+    "id": "59",
+    "name": "管弦乐琴乐谱：你的答案（交响乐版）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_626-你的答案（交响乐版）.ogg"
+  },
+  {
+    "id": "60",
+    "name": "管弦乐琴乐谱：近在天边（交响乐版）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_627-近在天边（交响乐版）.ogg"
+  },
+  {
+    "id": "61",
+    "name": "管弦乐琴乐谱：终结之战（交响乐版）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_628-终结之战（交响乐版）.ogg"
+  },
+  {
+    "id": "62",
+    "name": "管弦乐琴乐谱：坚不可摧（脉动电音）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_629-坚不可摧（脉动电音）.ogg"
+  },
+  {
+    "id": "63",
+    "name": "管弦乐琴乐谱：平衡（脉动电音）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_630-平衡（脉动电音）.ogg"
+  },
+  {
+    "id": "64",
+    "name": "管弦乐琴乐谱：阴谋美计（脉动电音）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_631-阴谋美计（脉动电音）.ogg"
+  },
+  {
+    "id": "65",
+    "name": "管弦乐琴乐谱：伟大的母港（脉动电音）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_632-伟大的母港（脉动电音）.ogg"
+  },
+  {
+    "id": "66",
+    "name": "管弦乐琴乐谱：一瞬千里（脉动电音）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_633-一瞬千里（脉动电音）.ogg"
+  },
+  {
+    "id": "67",
+    "name": "管弦乐琴乐谱：末路尽头（继续前进）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_661-末路尽头（继续前进）.ogg"
+  },
+  {
+    "id": "68",
+    "name": "管弦乐琴乐谱：相白质黑（继续前进）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_662-相白质黑（继续前进）.ogg"
+  },
+  {
+    "id": "69",
+    "name": "管弦乐琴乐谱：尖叫（继续前进）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_663-尖叫（继续前进）.ogg"
+  },
+  {
+    "id": "70",
+    "name": "管弦乐琴乐谱：生命的天平（继续前进）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_664-生命的天平（继续前进）.ogg"
+  },
+  {
+    "id": "71",
+    "name": "管弦乐琴乐谱：不倦之人雅典娜（继续前进）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_665-不倦之人雅典娜（继续前进）.ogg"
+  },
+  {
+    "id": "72",
+    "name": "管弦乐琴乐谱：生如归流（继续前进）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_656-生如归流（继续前进）.ogg"
+  },
+  {
+    "id": "73",
+    "name": "管弦乐琴乐谱：远古的昊空（继续前进）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_657-远古的昊空_～厄尔庇斯混曲～（继续前进）.ogg"
+  },
+  {
+    "id": "74",
+    "name": "管弦乐琴乐谱：开开心心胡萝卜（继续前进）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_658-开开心心胡萝卜（继续前进）.ogg"
+  },
+  {
+    "id": "75",
+    "name": "管弦乐琴乐谱：迷津（继续前进）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_659-迷津（继续前进）.ogg"
+  },
+  {
+    "id": "76",
+    "name": "管弦乐琴乐谱：满月之夜（Amanda Achen演唱版）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_660-满月之夜（Amanda_Achen演唱版）.ogg"
+  },
+  {
+    "id": "77",
+    "name": "管弦乐琴乐谱：满月之夜（继续前进）",
+    "scene": "",
+    "src": "暂无",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_666-满月之夜（继续前进）.ogg"
+  },
+  {
+    "id": "78",
+    "name": "管弦乐琴乐谱：生命的天平（Amanda Achen演唱版）",
+    "scene": "",
+    "src": "暂无",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_667-生命的天平（Amanda_Achen演唱版）.ogg"
+  },
+  {
+    "id": "79",
+    "name": "管弦乐琴乐谱：生如归流（嘉年华版）",
+    "scene": "",
+    "src": "暂无",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_699-生如归流（嘉年华版）.ogg"
+  },
+  {
+    "id": "80",
+    "name": "管弦乐琴乐谱：终途旅人 - 足迹（嘉年华版）",
+    "scene": "",
+    "src": "官方运营活动",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_700-终途旅人_-_足迹（嘉年华版）.ogg"
+  },
+  {
+    "id": "81",
+    "name": "管弦乐琴乐谱：今夕何夕",
+    "scene": "",
+    "src": "官方运营活动",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_762-今夕何夕.ogg"
+  },
+  {
+    "id": "82",
+    "name": "管弦乐琴乐谱：甜甜蜜蜜（临曦至暗）",
+    "scene": "",
+    "src": "暂无",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_766-甜甜蜜蜜（临曦至暗）.ogg"
+  },
+  {
+    "id": "83",
+    "name": "管弦乐琴乐谱：孤注一掷（临曦至暗）",
+    "scene": "",
+    "src": "暂无",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_767-孤注一掷（临曦至暗）.ogg"
+  },
+  {
+    "id": "84",
+    "name": "管弦乐琴乐谱：开场动画",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_793-开场动画.ogg"
+  },
+  {
+    "id": "85",
+    "name": "管弦乐琴乐谱：回忆",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_794-回忆.ogg"
+  },
+  {
+    "id": "86",
+    "name": "管弦乐琴乐谱：编队画面",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_795-编队画面.ogg"
+  },
+  {
+    "id": "87",
+    "name": "管弦乐琴乐谱：勇士传奇",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_796-勇士传奇.ogg"
+  },
+  {
+    "id": "88",
+    "name": "管弦乐琴乐谱：雷神西德主题曲",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_797-雷神西德主题曲.ogg"
+  },
+  {
+    "id": "89",
+    "name": "管弦乐琴乐谱：重压灭顶（蛮荒神影）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_856-重压灭顶（蛮荒神影）.ogg"
+  },
+  {
+    "id": "90",
+    "name": "管弦乐琴乐谱：混沌的漩涡（蛮荒神影）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_857-混沌的漩涡（蛮荒神影）.ogg"
+  },
+  {
+    "id": "91",
+    "name": "管弦乐琴乐谱：魔神（蛮荒神影）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_858-魔神（蛮荒神影）.ogg"
+  },
+  {
+    "id": "92",
+    "name": "管弦乐琴乐谱：轨迹（蛮荒神影）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_859-轨迹（蛮荒神影）.ogg"
+  },
+  {
+    "id": "93",
+    "name": "管弦乐琴乐谱：金属 - 正义无情（蛮荒神影）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_860-金属_-_正义无情（蛮荒神影）.ogg"
+  },
+  {
+    "id": "94",
+    "name": "管弦乐琴乐谱：山峡凉风（脉动电音2）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_861-山峡凉风（脉动电音2）.ogg"
+  },
+  {
+    "id": "95",
+    "name": "管弦乐琴乐谱：近在天边（脉动电音2）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_862-近在天边（脉动电音2）.ogg"
+  },
+  {
+    "id": "96",
+    "name": "管弦乐琴乐谱：满月之夜（脉动电音2）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_863-满月之夜（脉动电音2）.ogg"
+  },
+  {
+    "id": "97",
+    "name": "管弦乐琴乐谱：甜甜蜜蜜（脉动电音2）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_864-甜甜蜜蜜（脉动电音2）.ogg"
+  },
+  {
+    "id": "98",
+    "name": "管弦乐琴乐谱：贤王莫古尔·莫古十二世（脉动电音2）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_865-贤王莫古尔·莫古十二世（脉动电音2）.ogg"
+  },
+  {
+    "id": "99",
+    "name": "管弦乐琴乐谱：忘却的此岸（脉动电音2）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_866-忘却的此岸（脉动电音2）.ogg"
+  },
+  {
+    "id": "100",
+    "name": "管弦乐琴乐谱：末路尽头（脉动电音2）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_867-末路尽头（脉动电音2）.ogg"
+  },
+  {
+    "id": "101",
+    "name": "管弦乐琴乐谱：魔神（脉动电音2）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_868-魔神（脉动电音2）.ogg"
+  },
+  {
+    "id": "102",
+    "name": "管弦乐琴乐谱：不倦之人雅典娜（脉动电音2）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_869-不倦之人雅典娜（脉动电音2）.ogg"
+  },
+  {
+    "id": "103",
+    "name": "管弦乐琴乐谱：智慧的海螺（脉动电音2）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_870-智慧的海螺（脉动电音2）.ogg"
+  },
+  {
+    "id": "104",
+    "name": "管弦乐琴乐谱：暗影使者（暗涌十年）",
+    "scene": "",
+    "src": "暂无",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_871-暗影使者（暗涌十年）.ogg"
+  },
+  {
+    "id": "105",
+    "name": "管弦乐琴乐谱：跟着节奏跳起来（暗涌十年）",
+    "scene": "",
+    "src": "暂无",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_872-跟着节奏跳起来（暗涌十年）.ogg"
+  },
+  {
+    "id": "106",
+    "name": "管弦乐琴乐谱：呐喊（交响乐版）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_916-呐喊（交响乐版）.ogg"
+  },
+  {
+    "id": "107",
+    "name": "管弦乐琴乐谱：盐与苦难之歌（交响乐版）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_917-盐与苦难之歌（交响乐版）.ogg"
+  },
+  {
+    "id": "108",
+    "name": "管弦乐琴乐谱：明日与未来（交响乐版）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_918-明日与未来（交响乐版）.ogg"
+  },
+  {
+    "id": "109",
+    "name": "管弦乐琴乐谱：山峡凉风（交响乐版）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_919-山峡凉风（交响乐版）.ogg"
+  },
+  {
+    "id": "110",
+    "name": "管弦乐琴乐谱：孤注一掷（交响乐版）",
+    "scene": "",
+    "src": "道具商城 （套装）",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_920-孤注一掷（交响乐版）.ogg"
+  },
+  {
+    "id": "111",
+    "name": "管弦乐琴乐谱：微笑（泪流至曦明）",
+    "scene": "",
+    "src": "未知",
+    "url": ""
+  },
+  {
+    "id": "112",
+    "name": "管弦乐琴乐谱：金曦之都（泪流至曦明）",
+    "scene": "",
+    "src": "未知",
+    "url": ""
+  },
+  {
+    "id": "113",
+    "name": "管弦乐琴乐谱：甜甜蜜蜜（泪流至曦明）",
+    "scene": "",
+    "src": "未知",
+    "url": ""
+  },
+  {
+    "id": "114",
+    "name": "管弦乐琴乐谱：不会失效的约定（泪流至曦明）",
+    "scene": "",
+    "src": "未知",
+    "url": ""
+  },
+  {
+    "id": "115",
+    "name": "管弦乐琴乐谱：五月的玫瑰　～金曦～（泪流至曦明）",
+    "scene": "",
+    "src": "未知",
+    "url": ""
+  },
+  {
+    "id": "116",
+    "name": "管弦乐琴乐谱：邪欲（重返擂台）",
+    "scene": "",
+    "src": "未知",
+    "url": ""
+  },
+  {
+    "id": "117",
+    "name": "管弦乐琴乐谱：镜中的自我（重返擂台）",
+    "scene": "",
+    "src": "未知",
+    "url": ""
+  },
+  {
+    "id": "118",
+    "name": "管弦乐琴乐谱：绝对霸道（重返擂台）",
+    "scene": "",
+    "src": "未知",
+    "url": ""
+  },
+  {
+    "id": "119",
+    "name": "管弦乐琴乐谱：微笑（重返擂台）",
+    "scene": "",
+    "src": "未知",
+    "url": ""
+  },
+  {
+    "id": "120",
+    "name": "管弦乐琴乐谱：原始的审判：复审（重返擂台）",
+    "scene": "",
+    "src": "未知",
+    "url": ""
+  },
+  {
+    "id": "121",
+    "name": "管弦乐琴乐谱：微笑（交响乐版）",
+    "scene": "",
+    "src": "暂无",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_931-微笑（交响乐版）.ogg"
+  },
+  {
+    "id": "122",
+    "name": "管弦乐琴乐谱：忆中金曦 ～久远的混曲～（交响乐版）",
+    "scene": "",
+    "src": "暂无",
+    "url": "https://ff14.huijiwiki.com/wiki/文件:BGM_ORCH_932-忆中金曦_～久远的混曲～（交响乐版）.ogg"
+  }
+]

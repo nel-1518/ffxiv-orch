@@ -1,0 +1,166 @@
+/* ========== 共享面板样式（复刻 a.html 的游戏相框 + 羊皮纸面板） ========== */
+
+/* 外部模拟游戏相框 */
+.outer-frame {
+  background: var(--bg-mid);
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.8),
+    inset 0 0 0 2px var(--frame-border);
+  width: 100%;
+  max-width: 900px;
+}
+
+/* 主要内部羊皮纸面板 */
+.panel {
+  width: 100%;
+  background-color: var(--panel-bg);
+  border-radius: 8px;
+  padding: 20px 30px;
+  position: relative;
+  box-shadow: inset 0 0 20px var(--panel-shadow);
+  border: 2px solid var(--panel-border);
+}
+
+/* 顶部装饰性标题 */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* ===== Orchestrion 艺术横幅（Eorzean 符文字体） ===== */
+.orchestrion-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 0 auto 18px;
+  padding: 10px 18px;
+  position: relative;
+  background: linear-gradient(180deg, #4a3523 0%, #33251a 100%);
+  border: 2px solid #673523;
+  border-radius: 6px;
+  box-shadow:
+    inset 0 0 14px rgba(0, 0, 0, 0.55),
+    0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* 内层细线框 */
+.orchestrion-banner::before {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border: 1px solid rgba(201, 170, 131, 0.35);
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+.orchestrion-text {
+  font-family: 'Eorzean', var(--title-serif);
+  font-size: 26px;
+  letter-spacing: -1px;
+  color: #e2d5b4;
+  text-shadow:
+    0 0 1px #d0c9c2,
+    0 0 5px rgb(23, 22, 22);
+  line-height: 1.4;
+  padding-left: 7px; /* 抵消末字符右侧的 letter-spacing 视觉偏移 */
+}
+
+@media (max-width: 640px) {
+  .orchestrion-banner {
+    margin-bottom: 14px;
+    padding: 8px 10px;
+  }
+  .orchestrion-text {
+    font-size: 20px;
+    letter-spacing: 4px;
+  }
+}
+
+
+/* 顶部装饰性标题 */
+.header-title-box {
+  display: inline-block;
+  background: var(--panel-bg);
+  padding: 0 30px;
+  position: relative;
+  z-index: 2;
+}
+.header h1 {
+  font-family: var(--title-serif);
+  font-size: 20px;
+  color: var(--text-mid);
+  letter-spacing: 2px;
+  font-weight: bold;
+  opacity: 0.8;
+  padding: 6px 30px;
+  margin: 0;
+  white-space: nowrap;
+}
+.header::before,
+.header::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 120px;
+  height: 2px;
+  background: #8c7050;
+}
+.header::before {
+  left: -20px;
+}
+.header::after {
+  right: -20px;
+}
+
+/* 底部信息栏 */
+.footer-box {
+  border-top: 2px solid #bfa482;
+  padding-top: 15px;
+  margin-top: 5px;
+}
+.footer-title {
+  color: var(--accent-blue);
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.footer-content {
+  font-size: 15px;
+  color: var(--text-dark);
+}
+.footer-content a {
+  color: var(--accent-blue);
+  text-decoration: underline;
+}
+.footer-content a:hover {
+  opacity: 0.8;
+}
+
+/* 移动端适配 */
+@media (max-width: 640px) {
+  .outer-frame {
+    padding: 8px;
+    border-radius: 8px;
+  }
+  .panel {
+    padding: 14px 14px;
+  }
+  .header {
+    margin-bottom: 14px;
+  }
+  .header h1 {
+    font-size: 18px;
+    padding: 5px 12px;
+  }
+  .header-title-box {
+    padding: 0 10px;
+  }
+  .header::before,
+  .header::after {
+    width: 24px;
+  }
+}

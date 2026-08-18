@@ -1,0 +1,60 @@
+/* ========== 主页（封面式入口页） ========== */
+
+.home-frame {
+  max-width: 640px;
+}
+
+/* 简介 */
+.home-intro {
+  text-align: center;
+  margin: 6px 0 30px;
+}
+.home-slogan {
+  font-size: 17px;
+  color: var(--text-mid);
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.home-desc {
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 2;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* 入口按钮（仿 a.html icon-btn 立体感） */
+.home-actions {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.home-entry-btn {
+  display: inline-block;
+  background: #8e775c;
+  color: #f2e6ce;
+  padding: 12px 46px;
+  border-radius: 24px;
+  font-size: 16px;
+  letter-spacing: 3px;
+  box-shadow:
+    inset 0 -3px 0 #5a4a38,
+    0 2px 5px rgba(0, 0, 0, 0.3);
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
+.home-entry-btn:hover {
+  background: #a5876a;
+  color: #fff;
+  border-color: #e2eef9;
+  box-shadow:
+    0 0 10px rgba(214, 225, 238, 0.6),
+    inset 0 -3px 0 #5a4a38;
+}
+
+@media (max-width: 640px) {
+  .home-entry-btn {
+    padding: 11px 32px;
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+}
