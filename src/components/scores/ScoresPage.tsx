@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import type { CSSProperties } from 'react'
+import type { ChangeEvent, CSSProperties } from 'react'
 import { NOTES_CONFIG, PAGE_SIZE, TYPE_ORDER } from '../../constants'
 import type { ScoreItem } from '../../types'
 import { fetchScores, groupByType, loadOwned, saveOwned } from '../../utils/scores'
@@ -37,9 +37,9 @@ function createNote(id: number): FloatingNote {
   }
 }
 
-/** 已获得标记的唯一标识：type-id 复合键（各分类文件 id 各自从 1 编号，会重复） */
+/** 已获得标记的唯一标识：物品 id（Item.csv 中全局唯一，跨分类不重复） */
 function ownedKey(item: ScoreItem): string {
-  return `${item.type}-${item.id}`
+  return String(item.id)
 }
 
 /** 编号补零为三位，如 1 → 001 */
@@ -103,6 +103,8 @@ function ScoresPage() {
   const noteIdRef = useRef(0)
   const activeCountRef = useRef(0)
   const timersRef = useRef<number[]>([])
+  // 导入导出用的隐藏文件选择框
+  const fileInputRef = useRef<HTMLInputElement | null>(null)
 
   useEffect(() => {
     const spawn = () => {
@@ -294,6 +296,79 @@ function ScoresPage() {
     }
   }
 
+  // 导出已获得乐谱：按类型+编号排序，每行一个完整名称，方便阅读与再次导入
+  const handleExport = () => {
+    const ownedList = scores
+      .filter((s) => owned.has(ownedKey(s)))
+      .sort((a, b) => {
+        const typeDiff = TYPE_ORDER.indexOf(a.type) - TYPE_ORDER.indexOf(b.type)
+        if (typeDiff !== 0) return typeDiff
+        return Number(a.num) - Number(b.num)
+      })
+    if (ownedList.length === 0) {
+      showToast('暂无可导出的已获得乐谱')
+      return
+    }
+    const text = ownedList.map((s) => s.name).join('\n')
+    // BOM 前缀：Windows 记事本按 UTF-8 打开不会乱码
+    const blob = new Blob(['\uFEFF' + text], { type: 'text/plain;charset=utf-8' })
+    const url = URL.createObjectURL(blob)
+    const link = document.createElement('a')
+    link.href = url
+    link.download = 'ffxiv-orch-已获得乐谱.txt'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+    URL.revokeObjectURL(url)
+    showToast(`已导出 ${ownedList.length} 首乐谱`)
+  }
+
+  // 点击「导入」打开文件选择框
+  const handleImportClick = () => {
+    fileInputRef.current?.click()
+  }
+
+  // 导入 txt：每行一个乐谱名称，按完整名称精确匹配后标记为已获得
+  const handleImportFile = async (e: ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    e.target.value = ''
+    if (!file) return
+    try {
+      const text = await file.text()
+      const nameToScore = new Map(scores.map((s) => [s.name, s]))
+      const next = new Set(ownedRef.current)
+      let imported = 0
+      let notFound = 0
+      for (const raw of text.split(/\r?\n/)) {
+        const name = raw.trim()
+        if (!name) continue
+        const item = nameToScore.get(name)
+        if (!item) {
+          notFound += 1
+          continue
+        }
+        const key = ownedKey(item)
+        if (!next.has(key)) {
+          next.add(key)
+          imported += 1
+        }
+      }
+      ownedRef.current = next
+      setOwned(next)
+      saveOwned(next)
+      const notFoundTip = notFound > 0 ? `，${notFound} 条未匹配` : ''
+      if (imported > 0) {
+        showToast(`已导入 ${imported} 首乐谱${notFoundTip}`)
+      } else if (notFound > 0) {
+        showToast(`未匹配到任何乐谱（${notFound} 条）`)
+      } else {
+        showToast('没有新的乐谱可导入')
+      }
+    } catch {
+      showToast('导入失败，请检查文件内容')
+    }
+  }
+
   // 切换类型：重置渐进渲染；切回「全部」时退出快速标记（按钮只在具体分类下显示）
   const handleTypeChange = (type: string) => {
     setActiveType(type)
@@ -390,6 +465,32 @@ function ScoresPage() {
               >
                 显示：{ownedFilter === 'all' ? '全部' : ownedFilter === 'owned' ? '已获得' : '未获得'}
               </button>
+              {/* 导入导出：仅「全部」分类下显示 */}
+              {activeType === ALL && (
+                <div className="io-group">
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept=".txt,text/plain"
+                    style={{ display: 'none' }}
+                    onChange={handleImportFile}
+                  />
+                  <button
+                    type="button"
+                    className="io-btn"
+                    onClick={handleImportClick}
+                  >
+                    导入
+                  </button>
+                  <button
+                    type="button"
+                    className="io-btn"
+                    onClick={handleExport}
+                  >
+                    导出
+                  </button>
+                </div>
+              )}
               {/* 快速标记：仅具体分类下显示，点击进入批量标记模式 */}
               {activeType !== ALL && (
                 <button
@@ -454,7 +555,7 @@ function ScoresPage() {
                       onMouseEnter={() => handleSongMouseEnter(item)}
                       title={quickMark ? '点击切换标记 · 按住拖动批量标记' : '点击查看详情'}
                     >
-                      <span className="song-id">{formatId(item.id)}</span>
+                      <span className="song-id">{formatId(item.num)}</span>
                       <span className="song-main">
                         <span className="song-name">{shortName}</span>
                         {item.scene && <span className="song-scene">{item.scene}</span>}
@@ -523,7 +624,7 @@ function ScoresPage() {
             <div className="modal-body">
               <div className="modal-row">
                 <span className="modal-label">编号</span>
-                <span className="modal-value">{formatId(selected.id)}</span>
+                <span className="modal-value">{formatId(selected.num)}</span>
               </div>
               <div className="modal-row">
                 <span className="modal-label">类型</span>

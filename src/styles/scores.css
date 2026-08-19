@@ -159,6 +159,26 @@
   background: var(--accent-blue-light);
   border-color: var(--accent-blue-light);
 }
+/* 导入/导出按钮组（仅「全部」分类下显示） */
+.io-group {
+  display: flex;
+  gap: 8px;
+}
+.io-btn {
+  font-size: 13px;
+  color: var(--text-mid);
+  padding: 6px 14px;
+  white-space: nowrap;
+  background: #fbf3e0;
+  border: 1px solid var(--panel-border);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.io-btn:hover {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+}
 
 /* 快速标记提示条 */
 .quick-mark-bar {
