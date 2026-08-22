@@ -78,6 +78,11 @@ function wikiUrl(name: string): string {
   return `https://ff14.huijiwiki.com/wiki/物品:${encodeURIComponent(name)}`
 }
 
+/** 灰机 wiki 物品页地址（名称需 URL 编码） */
+function priceUrl(id: number): string {
+  return `https://universalis.app/market/${id}`
+}
+
 function ScoresPage() {
   const [scores, setScores] = useState<ScoreItem[]>([])
   const [loadError, setLoadError] = useState('')
@@ -624,15 +629,14 @@ function ScoresPage() {
             </button>
             <div className="modal-title">{selected.name}</div>
             <div className="modal-body">
-              {!HIDE_NUMBER_TYPES.has(selected.type) && (
-                <div className="modal-row">
-                  <span className="modal-label">编号</span>
-                  <span className="modal-value">{formatId(selected.num)}</span>
-                </div>
-              )}
               <div className="modal-row">
-                <span className="modal-label">类型</span>
-                <span className="modal-value">{selected.type}</span>
+                <span className="modal-label">分类</span>
+                <span className="modal-value">
+                  {
+                    HIDE_NUMBER_TYPES.has(selected.type) ? 
+                    `${selected.type}`
+                    :`${selected.type} - ${formatId(selected.num)}`
+                  }</span>
               </div>
               {selected.scene && (
                 <div className="modal-row">
@@ -657,12 +661,19 @@ function ScoresPage() {
                   </a>
                 </span>
               </div>
-              <div className="modal-row">
-                <span className="modal-label">物品 ID</span>
-                <span className="modal-value">
-                    {selected.id}
-                </span>
-              </div>
+              {selected.trade === 1 && (
+                <div className="modal-row">
+                  <span className="modal-label">可交易</span>
+                  <a
+                    className="modal-text-link"
+                    href={priceUrl(selected.id)}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    当前市场价格（Universalis）
+                  </a>
+                </div>
+              )}
             </div>
             <div className="modal-actions">
               <button

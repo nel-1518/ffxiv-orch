@@ -12,6 +12,8 @@ export interface ScoreItem {
   type: string
   /** Item.csv 中的物品 id（数字） */
   id: number
+  /** 是否可交易，0 不可交易，1 可交易 */
+  trade: number
 }
 
 /** 按类型分组后的结果 */
