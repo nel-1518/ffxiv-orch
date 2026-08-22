@@ -1,6 +1,6 @@
 /** 单条乐谱记录（来自 public/data/data.json） */
 export interface ScoreItem {
-  /** 分类内序号（字符串） */
+  /** 分类内序号（三位数字符串，如 001、002、012） */
   num: string
   /** 乐谱名称，如「管弦乐琴乐谱：水车低鸣」 */
   name: string

@@ -42,9 +42,9 @@ function ownedKey(item: ScoreItem): string {
   return String(item.id)
 }
 
-/** 编号补零为三位，如 1 → 001 */
+/** 编号展示：数据中已存为三位数（001、002…），直接返回 */
 function formatId(id: string): string {
-  return id.padStart(3, '0')
+  return id
 }
 
 /** 复制文本：优先 Clipboard API，被拒绝或不可用时降级 execCommand */
@@ -587,13 +587,13 @@ function ScoresPage() {
           <div className="footer-content">
             点击乐谱可查看详情、跳转灰机WIKI，详情中可标记已获得；分类下还可使用「快速标记」点击/拖动批量操作，记录保存在本地，刷新后仍然有效。
             <br />
-            数据来自
+            乐谱相关数据来自
             <a
-              href="https://ff14.huijiwiki.com/wiki/管弦乐琴乐谱集/乐谱一览"
+              href="https://ff14.huijiwiki.com/wiki/管弦乐琴乐谱集"
               target="_blank"
               rel="noreferrer"
             >
-              最终幻想XIV中文维基-管弦乐琴乐谱集/乐谱一览
+              最终幻想XIV中文维基-管弦乐琴乐谱集
             </a>
           </div>
         </div>
