@@ -468,7 +468,6 @@
   flex-wrap: wrap;
   gap: 10px;
 }
-.modal-link,
 .modal-copy,
 .modal-mark,
 .modal-confirm {
@@ -514,13 +513,14 @@
   background: #a5876a;
   color: #fff;
 }
-.modal-link {
-  background: #8e775c;
-  color: #f2e6ce;
+.modal-text-link {
+  color: #8a5a2b;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
 }
-.modal-link:hover {
-  background: #a5876a;
-  color: #fff;
+.modal-text-link:hover {
+  color: #bd6b2d;
 }
 .modal-copy {
   background: #c9aa83;

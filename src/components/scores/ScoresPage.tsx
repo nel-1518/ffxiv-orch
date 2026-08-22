@@ -6,6 +6,7 @@ import { fetchScores, groupByType, loadOwned, saveOwned } from '../../utils/scor
 import '../../styles/scores.css'
 
 const ALL = '全部'
+const HIDE_NUMBER_TYPES = new Set(['季节活动', '商城与特典'])
 
 /** 背景音符符号池 */
 const NOTE_SYMBOLS = ['♪', '♫', '♩', '♬']
@@ -542,6 +543,7 @@ function ScoresPage() {
               <div className="song-grid">
                 {visible.map((item) => {
                   const isOwned = owned.has(ownedKey(item))
+                  const showNumber = !HIDE_NUMBER_TYPES.has(item.type)
                   const shortName = item.name.replace(/^管弦乐琴乐谱：/, '')
                   return (
                     <div
@@ -555,7 +557,7 @@ function ScoresPage() {
                       onMouseEnter={() => handleSongMouseEnter(item)}
                       title={quickMark ? '点击切换标记 · 按住拖动批量标记' : '点击查看详情'}
                     >
-                      <span className="song-id">{formatId(item.num)}</span>
+                      {showNumber && <span className="song-id">{formatId(item.num)}</span>}
                       <span className="song-main">
                         <span className="song-name">{shortName}</span>
                         {item.scene && <span className="song-scene">{item.scene}</span>}
@@ -622,10 +624,12 @@ function ScoresPage() {
             </button>
             <div className="modal-title">{selected.name}</div>
             <div className="modal-body">
-              <div className="modal-row">
-                <span className="modal-label">编号</span>
-                <span className="modal-value">{formatId(selected.num)}</span>
-              </div>
+              {!HIDE_NUMBER_TYPES.has(selected.type) && (
+                <div className="modal-row">
+                  <span className="modal-label">编号</span>
+                  <span className="modal-value">{formatId(selected.num)}</span>
+                </div>
+              )}
               <div className="modal-row">
                 <span className="modal-label">类型</span>
                 <span className="modal-value">{selected.type}</span>
@@ -640,6 +644,25 @@ function ScoresPage() {
                 <span className="modal-label">获得方法</span>
                 <span className="modal-value">{selected.src}</span>
               </div>
+              <div className="modal-row">
+                <span className="modal-label">WIKI</span>
+                <span className="modal-value">
+                  <a
+                    className="modal-text-link"
+                    href={wikiUrl(selected.name)}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    查看获取途径、试听等
+                  </a>
+                </span>
+              </div>
+              <div className="modal-row">
+                <span className="modal-label">物品 ID</span>
+                <span className="modal-value">
+                    {selected.id}
+                </span>
+              </div>
             </div>
             <div className="modal-actions">
               <button
@@ -649,14 +672,6 @@ function ScoresPage() {
               >
                 {owned.has(ownedKey(selected)) ? '取消标记' : '标记为已获得'}
               </button>
-              <a
-                className="modal-link"
-                href={wikiUrl(selected.name)}
-                target="_blank"
-                rel="noreferrer"
-              >
-                WIKI（试听）
-              </a>
               <button
                 type="button"
                 className="modal-copy"
