@@ -60,6 +60,7 @@ const DEFAULT_FILTER: FilterConfig = {
   trade: 'all',
   hideSeasonal: false,
   hideShop: false,
+  hideNoSource: false,
 }
 
 /** 读取筛选配置（缺字段时回退默认值，进入页面自动应用） */

@@ -191,12 +191,15 @@ function ScoresPage() {
     const kw = query.trim().toLowerCase()
     let list = scores
     if (activeType === ALL) {
-      // 「全部」下按配置隐藏指定类型，不参与统计与展示
+      // 「全部」下按配置隐藏指定类型/获取方式，不参与统计与展示
       if (filter.hideSeasonal) {
         list = list.filter((s) => s.type !== '季节活动')
       }
       if (filter.hideShop) {
         list = list.filter((s) => s.type !== '商城与特典')
+      }
+      if (filter.hideNoSource) {
+        list = list.filter((s) => s.src !== '暂无')
       }
     } else {
       list = list.filter((s) => s.type === activeType)
@@ -234,13 +237,14 @@ function ScoresPage() {
     return map
   }, [scores, owned])
 
-  // 「全部」下的总数统计（受隐藏类型配置影响）
+  // 「全部」下的总数统计（受隐藏类型/获取方式配置影响）
   const allStats = useMemo(() => {
     let total = 0
     let ownedCount = 0
     for (const s of scores) {
       if (filter.hideSeasonal && s.type === '季节活动') continue
       if (filter.hideShop && s.type === '商城与特典') continue
+      if (filter.hideNoSource && s.src === '暂无') continue
       total += 1
       if (owned.has(ownedKey(s))) ownedCount += 1
     }
@@ -883,6 +887,15 @@ function ScoresPage() {
                   onChange={(e) => updateFilter({ hideShop: e.target.checked })}
                 />
                 <span>在「全部」中不统计「商城与特典」乐谱</span>
+              </label>
+              {/* 第五行：隐藏暂无获取方式 */}
+              <label className="filter-check-row">
+                <input
+                  type="checkbox"
+                  checked={filter.hideNoSource}
+                  onChange={(e) => updateFilter({ hideNoSource: e.target.checked })}
+                />
+                <span>在「全部」中不统计暂无获取方式的乐谱</span>
               </label>
             </div>
           </div>

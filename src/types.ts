@@ -32,4 +32,6 @@ export interface FilterConfig {
   hideSeasonal: boolean
   /** 在「全部」中不统计商城与特典乐谱 */
   hideShop: boolean
+  /** 在「全部」中不统计暂无获取方式的乐谱（src 为“暂无”） */
+  hideNoSource: boolean
 }
