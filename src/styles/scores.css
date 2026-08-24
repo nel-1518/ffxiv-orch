@@ -100,10 +100,17 @@
   border-bottom: 1px solid #c9b99a;
   flex-wrap: wrap;
 }
-.search-input {
+/* 搜索框容器（内含输入框与清除按钮） */
+.search-box {
   flex: 1;
   min-width: 200px;
-  padding: 8px 14px;
+  position: relative;
+}
+.search-input {
+  display: block;
+  width: 100%;
+  height: 36px;
+  padding: 0 32px 0 14px;
   font-size: 14px;
   color: var(--text-mid);
   background: #fbf3e0;
@@ -115,6 +122,29 @@
 }
 .search-input:focus {
   border-color: var(--accent-blue-light);
+}
+/* 清除搜索按钮：输入框内有文字时出现，悬浮于输入框右侧 */
+.search-clear {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--text-faint);
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.search-clear:hover {
+  color: var(--text-dark);
 }
 .filter-toggle {
   font-size: 13px;

@@ -120,6 +120,8 @@ function ScoresPage() {
   const timersRef = useRef<number[]>([])
   // 导入导出用的隐藏文件选择框
   const fileInputRef = useRef<HTMLInputElement | null>(null)
+  // 搜索输入框（清除按钮点击后聚焦回输入框）
+  const searchInputRef = useRef<HTMLInputElement | null>(null)
 
   useEffect(() => {
     const spawn = () => {
@@ -259,6 +261,20 @@ function ScoresPage() {
     [filter],
   )
 
+  // 当前视图（全部或当前分类）的已收集/总数统计
+  const statInfo = useMemo(() => {
+    if (activeType === ALL) {
+      return { owned: allStats.owned, total: allStats.total }
+    }
+    const stat = typeStats.get(activeType)
+    return { owned: stat?.owned ?? 0, total: stat?.total ?? 0 }
+  }, [activeType, allStats, typeStats])
+
+  // 已收集百分比（向下取整；总数为 0 时返回 0）
+  const collectPercent = statInfo.total > 0
+    ? Math.floor((statInfo.owned / statInfo.total) * 100)
+    : 0
+
   const visible = filtered.slice(0, visibleCount)
 
   const showToast = (msg: string) => {
@@ -350,11 +366,12 @@ function ScoresPage() {
     setSelected(item)
   }
 
-  // 复制乐谱名称（弹窗内按钮）
+  // 复制乐谱名称（弹窗内按钮；复制成功后自动关闭弹窗）
   const handleCopyName = async (item: ScoreItem) => {
     try {
       await copyText(item.name)
       showToast(`已复制：${item.name}`)
+      setSelected(null)
     } catch {
       showToast('复制失败，请手动选择文本')
     }
@@ -506,16 +523,33 @@ function ScoresPage() {
 
             {/* 搜索与筛选 */}
             <div className="filter-row">
-              <input
-                className="search-input"
-                type="search"
-                placeholder="搜索乐谱名称 / 场景 / 获得方法"
-                value={query}
-                onChange={(e) => {
-                  setQuery(e.target.value)
-                  setVisibleCount(PAGE_SIZE)
-                }}
-              />
+              <div className="search-box">
+                <input
+                  ref={searchInputRef}
+                  className="search-input"
+                  type="search"
+                  placeholder="搜索乐谱名称 / 场景 / 获得方法"
+                  value={query}
+                  onChange={(e) => {
+                    setQuery(e.target.value)
+                    setVisibleCount(PAGE_SIZE)
+                  }}
+                />
+                {query && (
+                  <button
+                    type="button"
+                    className="search-clear"
+                    aria-label="清除搜索"
+                    onClick={() => {
+                      setQuery('')
+                      setVisibleCount(PAGE_SIZE)
+                      searchInputRef.current?.focus()
+                    }}
+                  >
+                    ×
+                  </button>
+                )}
+              </div>
               <button
                 type="button"
                 className={`filter-toggle${isFilterActive ? ' active' : ''}`}
@@ -586,11 +620,7 @@ function ScoresPage() {
                 {activeType === ALL ? '全部乐谱' : activeType} · {filtered.length} 首
               </span>
               <span className="result-hint">
-                已收集{' '}
-                {activeType === ALL
-                  ? allStats.owned
-                  : typeStats.get(activeType)?.owned ?? 0}
-                /{activeType === ALL ? allStats.total : typeStats.get(activeType)?.total ?? 0}
+                已收集 {statInfo.owned}/{statInfo.total}（{collectPercent}%）
               </span>
             </div>
 
