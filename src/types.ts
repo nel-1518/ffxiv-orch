@@ -21,3 +21,15 @@ export interface TypeGroup {
   type: string
   items: ScoreItem[]
 }
+
+/** 筛选配置（本地持久化，进入页面自动应用） */
+export interface FilterConfig {
+  /** 已获得筛选：all=全部 / owned=仅已获得 / notOwned=仅未获得 */
+  owned: 'all' | 'owned' | 'notOwned'
+  /** 交易筛选：all=全部 / trade=仅可交易 / notTrade=仅不可交易 */
+  trade: 'all' | 'trade' | 'notTrade'
+  /** 在「全部」中不统计季节活动乐谱 */
+  hideSeasonal: boolean
+  /** 在「全部」中不统计商城与特典乐谱 */
+  hideShop: boolean
+}

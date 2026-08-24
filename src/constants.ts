@@ -19,6 +19,9 @@ export const TYPE_ORDER: string[] = [
 /** 已获得标记的 localStorage key */
 export const OWNED_KEY = 'ffxiv-orch-owned'
 
+/** 筛选配置的 localStorage key */
+export const FILTER_KEY = 'ffxiv-orch-filter'
+
 /** 每批渲染的乐谱条数 */
 export const PAGE_SIZE = 50
 

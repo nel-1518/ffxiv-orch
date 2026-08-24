@@ -1,8 +1,15 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { ChangeEvent, CSSProperties } from 'react'
 import { NOTES_CONFIG, PAGE_SIZE, TYPE_ORDER } from '../../constants'
-import type { ScoreItem } from '../../types'
-import { fetchScores, groupByType, loadOwned, saveOwned } from '../../utils/scores'
+import type { FilterConfig, ScoreItem } from '../../types'
+import {
+  fetchScores,
+  groupByType,
+  loadFilter,
+  loadOwned,
+  saveFilter,
+  saveOwned,
+} from '../../utils/scores'
 import '../../styles/scores.css'
 
 const ALL = '全部'
@@ -88,8 +95,10 @@ function ScoresPage() {
   const [loadError, setLoadError] = useState('')
   const [activeType, setActiveType] = useState(ALL)
   const [query, setQuery] = useState('')
-  // 已获得筛选：all=全部 / owned=仅已获得 / notOwned=仅未获得
-  const [ownedFilter, setOwnedFilter] = useState<'all' | 'owned' | 'notOwned'>('all')
+  // 筛选配置（本地持久化，进入页面自动应用）：已获得 / 可交易 / 隐藏类型
+  const [filter, setFilter] = useState<FilterConfig>(() => loadFilter())
+  // 筛选弹窗开关
+  const [filterOpen, setFilterOpen] = useState(false)
   const [owned, setOwned] = useState<Set<string>>(() => loadOwned())
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE)
   const [toast, setToast] = useState('')
@@ -152,12 +161,13 @@ function ScoresPage() {
 
   // 弹窗打开时锁定页面滚动，Esc 关闭
   useEffect(() => {
-    if (!selected && !confirmMarkAll) return
+    if (!selected && !confirmMarkAll && !filterOpen) return
     document.body.style.overflow = 'hidden'
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         setSelected(null)
         setConfirmMarkAll(false)
+        setFilterOpen(false)
       }
     }
     window.addEventListener('keydown', onKey)
@@ -165,7 +175,7 @@ function ScoresPage() {
       document.body.style.overflow = ''
       window.removeEventListener('keydown', onKey)
     }
-  }, [selected, confirmMarkAll])
+  }, [selected, confirmMarkAll, filterOpen])
 
   useEffect(() => {
     fetchScores()
@@ -176,11 +186,19 @@ function ScoresPage() {
   // 按类型分组（顺序遵循 TYPE_ORDER）
   const groups = useMemo(() => groupByType(scores, TYPE_ORDER), [scores])
 
-  // 过滤：类型 → 关键词（名称/场景/获得方法）→ 仅已获得
+  // 过滤：类型（全部下可隐藏指定类型）→ 关键词 → 已获得 → 可交易
   const filtered = useMemo(() => {
     const kw = query.trim().toLowerCase()
     let list = scores
-    if (activeType !== ALL) {
+    if (activeType === ALL) {
+      // 「全部」下按配置隐藏指定类型，不参与统计与展示
+      if (filter.hideSeasonal) {
+        list = list.filter((s) => s.type !== '季节活动')
+      }
+      if (filter.hideShop) {
+        list = list.filter((s) => s.type !== '商城与特典')
+      }
+    } else {
       list = list.filter((s) => s.type === activeType)
     }
     if (kw) {
@@ -191,13 +209,18 @@ function ScoresPage() {
           s.src.toLowerCase().includes(kw),
       )
     }
-    if (ownedFilter === 'owned') {
+    if (filter.owned === 'owned') {
       list = list.filter((s) => owned.has(ownedKey(s)))
-    } else if (ownedFilter === 'notOwned') {
+    } else if (filter.owned === 'notOwned') {
       list = list.filter((s) => !owned.has(ownedKey(s)))
     }
+    if (filter.trade === 'trade') {
+      list = list.filter((s) => s.trade === 1)
+    } else if (filter.trade === 'notTrade') {
+      list = list.filter((s) => s.trade === 0)
+    }
     return list
-  }, [scores, activeType, query, ownedFilter, owned])
+  }, [scores, activeType, query, filter, owned])
 
   // 每个类型的已收集/总数统计
   const typeStats = useMemo(() => {
@@ -211,12 +234,43 @@ function ScoresPage() {
     return map
   }, [scores, owned])
 
+  // 「全部」下的总数统计（受隐藏类型配置影响）
+  const allStats = useMemo(() => {
+    let total = 0
+    let ownedCount = 0
+    for (const s of scores) {
+      if (filter.hideSeasonal && s.type === '季节活动') continue
+      if (filter.hideShop && s.type === '商城与特典') continue
+      total += 1
+      if (owned.has(ownedKey(s))) ownedCount += 1
+    }
+    return { total, owned: ownedCount }
+  }, [scores, filter, owned])
+
+  // 是否有任一筛选条件生效（「筛选」按钮高亮提示）
+  const isFilterActive = useMemo(
+    () =>
+      filter.owned !== 'all' ||
+      filter.trade !== 'all',
+    [filter],
+  )
+
   const visible = filtered.slice(0, visibleCount)
 
   const showToast = (msg: string) => {
     setToast(msg)
     window.clearTimeout(toastTimer.current)
     toastTimer.current = window.setTimeout(() => setToast(''), 1600)
+  }
+
+  // 更新筛选配置：写入本地并重置渐进渲染
+  const updateFilter = (patch: Partial<FilterConfig>) => {
+    setFilter((prev) => {
+      const next = { ...prev, ...patch }
+      saveFilter(next)
+      return next
+    })
+    setVisibleCount(PAGE_SIZE)
   }
 
   // 切换单个已获得标记（通过 ref 实时读写，拖拽批量触发时不会拿到过期状态）
@@ -431,7 +485,7 @@ function ScoresPage() {
                 onClick={() => handleTypeChange(ALL)}
               >
                 全部
-                <span className="type-count">{scores.length}</span>
+                <span className="type-count">{allStats.total}</span>
               </button>
               {groups.map((g) => (
                 <button
@@ -460,16 +514,11 @@ function ScoresPage() {
               />
               <button
                 type="button"
-                className={`filter-toggle${ownedFilter === 'all' ? '' : ' active'}`}
-                aria-label="切换显示范围：全部 / 已获得 / 未获得"
-                onClick={() => {
-                  setOwnedFilter((f) =>
-                    f === 'all' ? 'owned' : f === 'owned' ? 'notOwned' : 'all',
-                  )
-                  setVisibleCount(PAGE_SIZE)
-                }}
+                className={`filter-toggle${isFilterActive ? ' active' : ''}`}
+                aria-label="打开筛选"
+                onClick={() => setFilterOpen(true)}
               >
-                显示：{ownedFilter === 'all' ? '全部' : ownedFilter === 'owned' ? '已获得' : '未获得'}
+                筛选
               </button>
               {/* 导入导出：仅「全部」分类下显示 */}
               {activeType === ALL && (
@@ -535,9 +584,9 @@ function ScoresPage() {
               <span className="result-hint">
                 已收集{' '}
                 {activeType === ALL
-                  ? scores.filter((s) => owned.has(ownedKey(s))).length
+                  ? allStats.owned
                   : typeStats.get(activeType)?.owned ?? 0}
-                /{activeType === ALL ? scores.length : typeStats.get(activeType)?.total ?? 0}
+                /{activeType === ALL ? allStats.total : typeStats.get(activeType)?.total ?? 0}
               </span>
             </div>
 
@@ -735,6 +784,106 @@ function ScoresPage() {
               >
                 确认标记
               </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* 筛选弹窗 */}
+      {filterOpen && (
+        <div
+          className="modal-overlay"
+          onClick={() => setFilterOpen(false)}
+        >
+          <div
+            className="modal-card filter-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-label="筛选"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="modal-close"
+              aria-label="关闭"
+              onClick={() => setFilterOpen(false)}
+            >
+              ×
+            </button>
+            <div className="modal-title">筛选</div>
+            <div className="modal-body">
+              {/* 第一行：已获得 */}
+              <div className="filter-option-row">
+                <span className="filter-option-label">已获得</span>
+                <div className="filter-option-group">
+                  <button
+                    type="button"
+                    className={`filter-option-btn${filter.owned === 'all' ? ' active' : ''}`}
+                    onClick={() => updateFilter({ owned: 'all' })}
+                  >
+                    全部
+                  </button>
+                  <button
+                    type="button"
+                    className={`filter-option-btn${filter.owned === 'owned' ? ' active' : ''}`}
+                    onClick={() => updateFilter({ owned: 'owned' })}
+                  >
+                    已获得
+                  </button>
+                  <button
+                    type="button"
+                    className={`filter-option-btn${filter.owned === 'notOwned' ? ' active' : ''}`}
+                    onClick={() => updateFilter({ owned: 'notOwned' })}
+                  >
+                    未获得
+                  </button>
+                </div>
+              </div>
+              {/* 第二行：可交易 */}
+              <div className="filter-option-row">
+                <span className="filter-option-label">可交易</span>
+                <div className="filter-option-group">
+                  <button
+                    type="button"
+                    className={`filter-option-btn${filter.trade === 'all' ? ' active' : ''}`}
+                    onClick={() => updateFilter({ trade: 'all' })}
+                  >
+                    全部
+                  </button>
+                  <button
+                    type="button"
+                    className={`filter-option-btn${filter.trade === 'trade' ? ' active' : ''}`}
+                    onClick={() => updateFilter({ trade: 'trade' })}
+                  >
+                    可交易
+                  </button>
+                  <button
+                    type="button"
+                    className={`filter-option-btn${filter.trade === 'notTrade' ? ' active' : ''}`}
+                    onClick={() => updateFilter({ trade: 'notTrade' })}
+                  >
+                    不可交易
+                  </button>
+                </div>
+              </div>
+              {/* 第三行：隐藏季节活动 */}
+              <label className="filter-check-row">
+                <input
+                  type="checkbox"
+                  checked={filter.hideSeasonal}
+                  onChange={(e) => updateFilter({ hideSeasonal: e.target.checked })}
+                />
+                <span>在「全部」中不统计「季节活动」乐谱</span>
+              </label>
+              {/* 第四行：隐藏商城与特典 */}
+              <label className="filter-check-row">
+                <input
+                  type="checkbox"
+                  checked={filter.hideShop}
+                  onChange={(e) => updateFilter({ hideShop: e.target.checked })}
+                />
+                <span>在「全部」中不统计「商城与特典」乐谱</span>
+              </label>
             </div>
           </div>
         </div>
